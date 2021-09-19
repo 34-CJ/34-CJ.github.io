@@ -6,7 +6,7 @@
   <link href="http://hjang.cn/atom.xml" rel="self"/>
   
   <link href="http://hjang.cn/"/>
-  <updated>2021-09-16T03:53:40.953Z</updated>
+  <updated>2021-09-16T03:53:40.951Z</updated>
   <id>http://hjang.cn/</id>
   
   <author>
@@ -15,19 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>title</title>
-    <link href="http://hjang.cn/posts/42496.html"/>
-    <id>http://hjang.cn/posts/42496.html</id>
-    <published>2021-07-28T10:46:19.000Z</published>
-    <updated>2021-09-16T03:53:40.953Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
