@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>家庭收支记账项目</title>
+    <url>/2021/10/09/project01/</url>
+    <content><![CDATA[<h1 id="家庭收支记账项目"><a href="#家庭收支记账项目" class="headerlink" title="家庭收支记账项目"></a><strong>家庭收支记账项目</strong></h1><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h2><h3 id="1-主界面"><a href="#1-主界面" class="headerlink" title="1.主界面"></a><strong>1.主界面</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">FamilyAccount</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;-------------家庭收支记账软件------------\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                1 收支明细&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                2 登记收入&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                3 登记支出&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                4退    出\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-加入选择结构的流程控制语句"><a href="#2-加入选择结构的流程控制语句" class="headerlink" title="2.加入选择结构的流程控制语句"></a><strong>2.加入选择结构的流程控制语句</strong></h2><h3 id="1-接受用户的选择"><a href="#1-接受用户的选择" class="headerlink" title="(1)接受用户的选择"></a><strong>(1)接受用户的选择</strong></h3><p><strong>char selection = Utility.readMenuSelection();</strong></p>
+<h3 id="2-根据用户的选择，执行不同的语句"><a href="#2-根据用户的选择，执行不同的语句" class="headerlink" title="(2)根据用户的选择，执行不同的语句"></a><strong>(2)根据用户的选择，执行不同的语句</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">char</span> selection = Utility.readMenuSelection();</span><br><span class="line">			<span class="keyword">switch</span>(selection)&#123;</span><br><span class="line">				</span><br><span class="line">			    <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">					<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">				System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">				System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">                <span class="comment">//登记支出</span></span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line"></span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">                <span class="comment">//退出</span></span><br><span class="line">					System.out.print(<span class="string">&quot;确认是否退出(Y/N):&quot;</span>);</span><br><span class="line">                    <span class="comment">//待补充</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-功能能够循环使用"><a href="#3-功能能够循环使用" class="headerlink" title="3.功能能够循环使用"></a><strong>3.功能能够循环使用</strong></h2><h3 id="（1）加入循环"><a href="#（1）加入循环" class="headerlink" title="（1）加入循环"></a><strong>（1）加入循环</strong></h3><h2 id="登记收入"><a href="#登记收入" class="headerlink" title="登记收入"></a><strong>登记收入</strong></h2><h3 id="（1）从键盘输入信息"><a href="#（1）从键盘输入信息" class="headerlink" title="（1）从键盘输入信息"></a><strong>（1）从键盘输入信息</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line"><span class="keyword">int</span> addMoney = Utility.readNumber();</span><br><span class="line">System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">String addInfo = Utility.readString();</span><br><span class="line"><span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="调整余额、串接信息"><a href="#调整余额、串接信息" class="headerlink" title="调整余额、串接信息"></a><strong>调整余额、串接信息</strong></h4><p><strong>基本金的记录可以使用 int 类型的局部变量来实现：</strong></p>
+<p> <strong>int balance = 10000;</strong></p>
+<p> <strong>收支明细记录可以使用 Sting 类型的变量来实现，其初始值为明细表的表头。例如：String details = “收支\t 账户金额\t 收支金额\t 说 明\n”;</strong> </p>
+<p><strong>在登记收支时，将收支金额与 balance 相加或相减，收支记录直接串接到 details 后面即可。</strong> </p>
+<p><strong>说明：因为余额和明细信息是多个功能，以及在程序退出之前多次登记是共享的，因此必须 把这两个变量声明在循环之上</strong></p>
+<h2 id="2-登记支出"><a href="#2-登记支出" class="headerlink" title="2.登记支出"></a><strong>2.登记支出</strong></h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> minusMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				String minusInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(balance &gt;=minusMoney)&#123;</span><br><span class="line">					balance -= minusMoney;</span><br><span class="line"></span><br><span class="line">					details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> +minusMoney + <span class="string">&quot;\t\t&quot;</span> + minusInfo +<span class="string">&quot;\n&quot;</span>); </span><br><span class="line">				&#125;<span class="keyword">else</span> </span><br><span class="line">				&#123;</span><br><span class="line">					System.out.print(<span class="string">&quot;支付超出账户额度，支付失败&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-收支明细"><a href="#3-收支明细" class="headerlink" title="3.收支明细"></a><strong>3.收支明细</strong></h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">				<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">			System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">			System.out.println(details);</span><br><span class="line">			System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="总结，完整代码为："><a href="#总结，完整代码为：" class="headerlink" title="总结，完整代码为："></a><strong>总结，完整代码为：</strong></h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">FamilyAccount</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	   <span class="keyword">boolean</span> isFlag = <span class="keyword">true</span>;</span><br><span class="line">	   <span class="keyword">int</span> balance = <span class="number">10000</span>;</span><br><span class="line"></span><br><span class="line">	   String details = <span class="string">&quot;收支\t账户金额\t收支金额\t说  明\n&quot;</span>;</span><br><span class="line">	   <span class="keyword">while</span> (isFlag)</span><br><span class="line">	   &#123;</span><br><span class="line">		   System.out.println(<span class="string">&quot;-------------家庭收支记账软件------------\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                1 收支明细&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                2 登记收入&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                3 登记支出&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                4退    出\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">char</span> selection = Utility.readMenuSelection();</span><br><span class="line">			<span class="keyword">switch</span>(selection)&#123;</span><br><span class="line">				</span><br><span class="line">			    <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">					<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">				System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">				System.out.println(details);</span><br><span class="line">				System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> addMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">				String addInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				balance +=  addMoney;</span><br><span class="line"></span><br><span class="line">				details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> + addMoney + <span class="string">&quot;\t\t&quot;</span> + addInfo +<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> minusMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				String minusInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(balance &gt;=minusMoney)&#123;</span><br><span class="line">					balance -= minusMoney;</span><br><span class="line"></span><br><span class="line">					details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> +minusMoney + <span class="string">&quot;\t\t&quot;</span> + minusInfo +<span class="string">&quot;\n&quot;</span>); </span><br><span class="line">				&#125;<span class="keyword">else</span> </span><br><span class="line">				&#123;</span><br><span class="line">					System.out.print(<span class="string">&quot;支付超出账户额度，支付失败&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">					System.out.print(<span class="string">&quot;确认是否退出(Y/N):&quot;</span>);</span><br><span class="line">					<span class="keyword">char</span> isExit = Utility.readConfirmSelection();</span><br><span class="line">					<span class="keyword">if</span> (isExit ==<span class="string">&#x27;Y&#x27;</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						isFlag =<span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">	   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello-My world</title>
+    <url>/2021/09/20/hello-world/</url>
+    <content><![CDATA[<h1 id="你好，我的博客"><a href="#你好，我的博客" class="headerlink" title="你好，我的博客"></a><em>你好，我的博客</em></h1><p>毫不夸张地说，这两天一直处于亢奋状态😂。</p>
+<p>基本框架及主题配置搭建完成后，真的就感觉这就是属于自己的小世界，奇妙的感觉。带着期望与激动的情绪去完成自己的心愿始终是妙不可言的事情。</p>
+<p>经历过大大小小的坑，甚至删除仓库重新做一次，对此十分的感动和珍惜。在此感谢身边的两位大佬哈哈，向你们学习，从今天起，我会更加努力学习，不断更新所学所感。</p>
+<hr>
+<p>欢迎大家光临我的博客园，希望有东西能帮助到你们，各位大佬如有建议可以联系</p>
+<p>QQ：2530115347</p>
+<p>wechat: h15585030161</p>
+<hr>
+<p>😊<strong>以此纪念真正意义的开站第一天~</strong></p>
+]]></content>
+      <tags>
+        <tag>我</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c语言指针</title>
+    <url>/2021/09/29/zhizhen/</url>
+    <content><![CDATA[<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a><em><strong><u>指针</u></strong></em></h1><h2 id="指针的重要性"><a href="#指针的重要性" class="headerlink" title="指针的重要性"></a><strong>指针的重要性</strong></h2><p><strong>表示一些复杂的数据结构  快速的传递数据，减少了内存的耗用  使函数返回 1个以上的值</strong> </p>
+<p><strong>能直接访问硬件 能够方便的处理字符串 是理解面向对象语言中引用的基础</strong> </p>
+<p><strong>总结:指针是c语言的灵魂</strong> </p>
+<hr>
+<h2 id="指针的定义"><a href="#指针的定义" class="headerlink" title="指针的定义"></a><strong>指针的定义</strong></h2><p><strong>地址</strong> </p>
+<p><strong>内存单元的编号 从零开始的非负整数 范围 :4G [ O- 4G- l ]</strong></p>
+<p> <strong>指针</strong> </p>
+<p><strong>指针就是地址， 地址就是指针</strong> </p>
+<p><strong>指针变量就是存放内存单元编号的变量，或者说指针变量就是存放地址的变量 指针和指针变量是两个不同的概念</strong> </p>
+<p><strong>但是要注意: 通常我们叙述时会把指针变量简称为指针，实际它们含义并不 指针的本质就是一个操作受限的非负整数</strong> </p>
+<hr>
+<h2 id="指针的分类"><a href="#指针的分类" class="headerlink" title="指针的分类"></a><strong>指针的分类</strong></h2><ol>
+<li><strong>基本类型指针</strong> </li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> * p; <span class="comment">//p是变量的名字， int *表示 p变量存放的是int类型变量的地址//int * p; 不表示定义了一个名字叫做*p的变量** </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> j;</span><br><span class="line">p = &amp;i; </span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li><p><strong>p保存了i的地址，因此p指向i</strong></p>
+</li>
+<li><p><strong>p不是i， i也不是p ，更准确的说: 修改p 的值不影响i 的值，修改 i的值也不会影响p 的值 如果一个指针变量指向 个普通变量，则   指针变量就完全等同于普通变量</strong></p>
+<p><strong>例子：如果 p是个指针变量，并且 p存放了普通变量 i的地址 。则p 指向了普通变量i</strong></p>
+<p> *<strong>p 就完全等同于 i</strong> </p>
+<p> <strong>或者说 在所有出现*p的地方都可以替换成i</strong></p>
+<p> <strong>在所有出现i的地方都可以替换成句<em>p</em></strong></p>
+<p>*<em>最准确的解释是:<em>p表示的是以p 的内容为地址的变量</em></em></p>
+<p><strong>附注:</strong> </p>
+<p>*<strong>的含义 1.乘法</strong> </p>
+<ol start="2">
+<li><p>*<em>定义指针变量 int * p;  //定义了一个名字叫p的变量， int <em>表示p 只能存放int变量的地址</em></em> </p>
+</li>
+<li><p><strong>指针运算符</strong> </p>
+<p><strong>该运算符放在已经定义好的指针变量的前面 如果p 是一个已经定义好的指针变量 则*p表示以p 的内容为地址的变量</strong></p>
+<p> <strong>如何通过被调函数修改主调函数普通变量的值</strong></p>
+<p> <strong>1.实参必须为该普通变量的地址</strong> </p>
+<ol start="2">
+<li><p><strong>形参必须为指针变量</strong></p>
+</li>
+<li><p><strong>在被调函数中通过</strong></p>
+<p> *<strong>形参名.. .</strong>  </p>
+<p><strong>的方式就可以修改主调函数相关变量的值</strong></p>
+</li>
+</ol>
+</li>
+<li><p><strong>指针和数组</strong> </p>
+<p><strong>指针和一维数组</strong> </p>
+<p><strong>一维数组名</strong> </p>
+<p><strong>一维数组名 是个指针常量</strong> </p>
+<p><strong>它存放的是一维数组第一个元素的地址</strong> </p>
+<p>下标和指针的关系如果p是个指针变量,则p[i]永远等价于* (p+i)</p>
+<p><strong>确定一个一维数组需要几个参数【如一个函数要处理一个一维数组，则要接收该数组的哪些信息】</strong></p>
+<p> <strong>需要两个参数: 数组第一个元素的地址 数组的长度</strong></p>
+<p> <strong>指针变量的运算</strong></p>
+<p> <strong>指针变量不能相加  不能相乘   也不能相除</strong> </p>
+<p><strong>如果两个指针变量指向的是同一块连续空间中的不同存储单元， 则这两个指针变量才可以相减</strong></p>
+<h2 id="指针与数组的对比"><a href="#指针与数组的对比" class="headerlink" title="指针与数组的对比"></a>指针与数组的对比</h2></li>
+</ol>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>指针</strong></th>
+<th align="center"><strong>数组</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>保存数据的地址，任何存入指针变量p的数据都会被当作地址来处理。p本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
+<td align="center"><strong>保存数据，数组名a代表的是数组首元素的首地址而不是数组的首地址。&amp;a才是整个数组的首地址。 a本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>间接访问数据，首先取得指针变量p的内容，把它作为地址，然后从这个地址提取数据或向这个地址写入数据。指针可以以指针的形式访问*(p+i);也可以以下标的形式访问p[i]。但其本质都是先取p的内容然后加上i *sizeof(类型)个byte作为数据的真正地址。</strong></td>
+<td align="center"><strong>直接访问数据， 数组名a是整个数组的名字，数组内每个元素 并没有名字。只能通过“具名+匿名” 的方式来访问其某个元素，不能把数组当一个整体 来进行读写操作。数组可以以指针的形式访问*(a+i);也可以以下标的形式访 问a[i].但其本质都是a所代表的数组首元素的首地址加上i*sizeof(类型)个byte作为数据的真正地址。</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>通常用于动态数据结构</strong></td>
+<td align="center"><strong>通常用于存储固定数目且数据类型相同的元</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>相关的函数为malloc和free.</strong></td>
+<td align="center"><strong>隐式分配和删除</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>通常指向匿名数据(当然也可指向具名数据）</strong></td>
+<td align="center"><strong>自身即为数组名</strong></td>
+</tr>
+</tbody></table>
+<h2 id="指针与二维数组"><a href="#指针与二维数组" class="headerlink" title="指针与二维数组"></a><strong>指针与二维数组</strong></h2><h3 id="指针与函数"><a href="#指针与函数" class="headerlink" title="指针与函数"></a><strong>指针与函数</strong></h3><h3 id="指针与结构体"><a href="#指针与结构体" class="headerlink" title="指针与结构体"></a><strong>指针与结构体</strong></h3><h3 id="多级指针"><a href="#多级指针" class="headerlink" title="多级指针"></a><strong>多级指针</strong></h3><p><strong>例：</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i =<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p=i;   <span class="comment">//p只能存放int类型变量的地址</span></span><br><span class="line"><span class="keyword">int</span> ** q=&amp;p;  / /q <span class="keyword">int</span> **类型， 所谓<span class="keyword">int</span> **类型就是指q只能存放<span class="keyword">int</span> *类型变的地址</span><br><span class="line"><span class="keyword">int</span> ***r= &amp;q; <span class="comment">//r int ***类型，所谓 int ***类型就是指r只能存放int **类型变量的地址</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="动态分配内存（重难点）"><a href="#动态分配内存（重难点）" class="headerlink" title="动态分配内存（重难点）"></a><strong>动态分配内存（重难点）</strong></h4><p><strong>传统数组的缺点:</strong> </p>
+<ol>
+<li><p><strong>数组长度必须事先制定，且只能是常整数，不能是变量</strong></p>
+<p><strong>例子:</strong> </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]; <span class="comment">//OK</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">int</span> len = <span class="number">5</span>; <span class="keyword">int</span> a[len]; <span class="comment">//error </span></span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li><p><strong>传统形式定义的数组，该数组的内存程序员无法手动释放 。在一个函数运行期间，系统为该函数中数组所分配的空间 会一直存在， 直到该函 数运行完毕肘，数组的 间才会被 系统释放</strong></p>
+</li>
+<li><p><strong>数组的长度一旦定义，其长度就不能再更改</strong> </p>
+<p> <strong>数组的长度不能在函数运行的过程中动态的扩充或缩小</strong></p>
+</li>
+<li><p><strong>A函数定义的数组，在 A函数运行期间可以被其它函数使用， 但A函数运行完毕之后， A函数中的数组将无法在被其他 函数使用</strong></p>
+<p><strong>传统方式定义的数组不能跨函数使用</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="为什么要动态分配内存"><a href="#为什么要动态分配内存" class="headerlink" title="为什么要动态分配内存"></a><strong>为什么要动态分配内存</strong></h4><p><strong>动态数组很好的解决了传统数组的这4个缺陷</strong> </p>
+<p><strong>传统数组也叫静态数组</strong></p>
+<hr>
+<p><strong>😩努力在学习中，后续更新哦~</strong></p>
+]]></content>
+      <categories>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>指针</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语作文笔记分享</title>
+    <url>/2021/09/29/yingyu/</url>
+    <content><![CDATA[<p><strong>1. 词： “出彩的”书面用词（一句一亮点）+ 四大类文章和论证逻辑必用词</strong></p>
+<p> <strong>“重要的”“不可或缺”</strong></p>
+<p>  <strong>Indispensable  Integral</strong></p>
+<p>  <strong>Relevant  vital crucial critical</strong> </p>
+<p> <strong>根源于。。。原因</strong></p>
+<p>   <strong>…stem from…</strong></p>
+<p>  <strong>相矛盾的观点</strong> </p>
+<p> <strong>Conflicting  contradictory  contrary  opposite</strong> </p>
+<p><strong>一个明显的趋势</strong></p>
+<p> <strong>Apparent marked discernible</strong> </p>
+<p><strong>一个棘手的问题</strong></p>
+<p> <strong>a thorny problem</strong> </p>
+<p><strong>Nevertheless  nonetheless</strong> </p>
+<p> <strong>…so that…    thereby…</strong></p>
+<p><strong>2. 句：四大类文章常用连接句， 开篇句，结尾句+ 句式变换</strong></p>
+<p><strong>现如今，大量的注意力正在给予。。。</strong></p>
+<p><strong>A great deal of attention is being paid to …</strong></p>
+<p><strong>权衡地来看，其优点胜过缺点。</strong> </p>
+<p><strong>On balance, pros outweigh cons.</strong> </p>
+<p><strong>在这种现象的背后，什么是动因呢？</strong></p>
+<p><strong>What are motivations behind this?</strong></p>
+<p><strong>采取紧急的措施是当务之急。</strong> </p>
+<p><strong>To take urgent action is an imperative.</strong> </p>
+<p><strong>在我们的前方是光明的前景。</strong> </p>
+<p><strong>Ahead of us lie bright prospects.</strong> </p>
+<p><strong>Only if __________.  (倒装句）</strong></p>
+<p><strong>3. 段： 开头结尾段内基本模式； 四大类文章大致段落组成</strong></p>
+<p><strong>4. 篇：样文,批改网自评。</strong></p>
+<hr>
+<p><strong>例题：（19交大）</strong></p>
+<p><strong>Give your opinions on this perspective: Obstacles can be seen as opportunities.</strong> </p>
+<p> <strong>样文：</strong></p>
+<p><strong>Life is not all rosy. We will all undergo ups and downs; joys and sorrows. Major obstacles in our lives, such as physical handicaps, failures in our career and loss of beloved ones can be terrifying. But optimists tend to regard obstacles as opportunities. Indeed, lots of strong-willed persons can emerge from barriers in their lives wiser and tougher.</strong> </p>
+<p><strong>Let’s explore how we can transform obstacles into opportunities from different angles. To start with, physical handicap can be devastating to most people, nevertheless lot can be derived from it from the perspective of a fearless person. Helen Keller suffered from irreversible sight and hearing impairment at an early age, but she ended up as a fertile writer who savored the manifold blessings of lives more than we physically sound persons. Equally remarkably, athletes who attend the Paralympics can sometimes run and swim faster than an average person without physical disabilities.</strong></p>
+<p><strong>Incredible stories like theses are no more rarely seen among ordinary people. Student who failed in their academic study in primary schools would perform much better and achieve a lot eventually if they were prodded and inspired timely. With humility and perseverance, slow-witted students are more likely to be aware of their own weaknesses and be motivated to be successful.</strong> </p>
+<p><strong>Last but not the least, think about how much our country has been through in the past two decades.  Massive earthquakes and outbreaks of epidemics once seemed to be hurdles impossible to be clear. But these hurdles turned out to be valuable opportunities for us to witness how united and capable we can be in the relentless struggles against disasters.</strong> </p>
+<p><strong>Granted, some obstacles in our lives can be overwhelming. But keep this in mind: what didn’t kill us makes us stronger.  Only if obstacles are reckoned as an opportunities could we complete missions impossible in our lives.</strong>  </p>
+<h3 id="观点论证型"><a href="#观点论证型" class="headerlink" title="观点论证型"></a><strong>观点论证型</strong></h3><p><strong>view  perspective notion  belief  conviction</strong> </p>
+<p><strong>Mindset  philosophy</strong> </p>
+<p><strong>Conventional idea</strong> </p>
+<p><strong>Outlook on life</strong> </p>
+<p><strong>模式化观念；成见。 Stereotype</strong> </p>
+<p><strong>There is a stereotype that a prestigious university can always guarantee its students success.</strong></p>
+<p><strong>可和以下</strong>adj混搭****</p>
+<p><strong>credible  justifiable</strong> </p>
+<p><strong>Prevailing widely-held  conventional.</strong> </p>
+<p><strong>Well-founded  well-grounded</strong></p>
+<p><strong>Ill-grounded</strong> </p>
+<p><strong>We should reinforce</strong>／underline the view that…****</p>
+<p><strong>It goes beyond doubt /dispute that…</strong> </p>
+<p><strong>Few would dispute that…</strong> </p>
+<p><strong>There is no question about…</strong></p>
+<p><strong>The view prevails among sb that…</strong></p>
+<p><strong>It is widely accepted that…</strong></p>
+<p><strong>There is a growing consensus that…</strong></p>
+<p><strong>It is unanimously agreed that…</strong></p>
+<p><strong>It is established that…</strong></p>
+<p> <strong>可以被确认的是</strong> </p>
+<p><strong>强调重要性</strong></p>
+<p><strong>Value   cherish</strong></p>
+<p><strong>Emphasis should be laid on ….</strong></p>
+<p><strong>Importance should be attached to…</strong> </p>
+<p><strong>We should pay particular attention to…</strong> </p>
+<p><strong>We cannot do without…</strong></p>
+<p><strong>… is acknowledge as/reckoned as an invaluable asset to us.</strong></p>
+<p><strong>… is a vital component of our life.</strong> </p>
+<hr>
+<h3 id="正反对比"><a href="#正反对比" class="headerlink" title="正反对比"></a><strong>正反对比</strong></h3><p><strong>We have  views. / )ur views seem to be…</strong></p>
+<p><strong>Conflicting / opposite /contrary/contradictory/</strong> </p>
+<p><strong>Differing / incompatible/inconsistent/irreconcilable</strong> </p>
+<p><strong>Their view seems to be…</strong></p>
+<p><strong>Plausible  stereotyped  ill-informed(<strong>无知的）ill-grounded</strong> （没有根据的）</strong></p>
+<p><strong>when it comes to: on the subject of. /concerning/ regarding</strong></p>
+<p><strong>We are divided…</strong></p>
+<p><strong>Our views differ…</strong></p>
+<p><strong>My view diverges from this…</strong></p>
+<p><strong>The view that… is under (…) debate. /at issue</strong></p>
+<p>​        <strong>heated/ intense/ vigorous</strong> </p>
+<p><strong>… has aroused controversy/ generated(considerable/wide-ranging)discussion. .</strong></p>
+<p><strong>Whether… is debatable/arguable.</strong> </p>
+<p><strong>Let’s shift our attention to the opposite /converse view.</strong> </p>
+<p> <strong>样文：</strong></p>
+<p><strong>It is increasingly apparent that overseas purchasing via online agents are now gaining considerable popularity. The ongoing trend appeals to some people on grounds of its convenience and affordability, whereas others are skeptical of it.</strong> </p>
+<p><strong>There are some distinct advantages when it comes to the process. First, convenience. the consumers can simply log on the overseas purchasing websites and have instant access to a wide array of high-quality products by simply tapping on the screen of their smart phones. Consequently, the shopping experience becomes time-saving and efficient, not to mention the fact that some commodities are not even available to domestic consumers. Second, affordability. The website can attract many consumers simultaneously to the same designer product so that they can sell it at a wholesale price, which in some cases could be only a fraction of the original one.</strong> </p>
+<p><strong>By contrast, many consumers voice their concerns. They would argue that the online agents cannot guarantee the quality of commodity unless the consumers check it out in person. Another worry is that sensitive personal data, such as credit card number and mobile phone number, can be leaked during the process, which might bring about security concerns.</strong></p>
+<p><strong>From where I stand, pros outweigh cons. Granted, overseas purchasing is a sphere where further improvements are still highly anticipated. The trend is now becoming unstoppable and the sellers on the platform are making every effort to refine it. Nonetheless, both the sellers and buyers should deliberate on how to tackle the potential data leak generated by the new mode of buying.</strong> </p>
+<hr>
+<h3 id="社会趋势"><a href="#社会趋势" class="headerlink" title="社会趋势"></a><strong>社会趋势</strong></h3><p><strong>名词类</strong></p>
+<p><strong>… is a(n)__ trend. /We are witnessing…</strong> </p>
+<p><strong>consistent  steady</strong> </p>
+<p>   <strong>accelerating (growing)</strong></p>
+<p>   <strong>underlying</strong> </p>
+<p>   <strong>dominant  prevailing</strong>  </p>
+<p><strong>marked   apparent  discernible.</strong> </p>
+<p><strong>There is a growing tendency for sb to do sth.</strong> </p>
+<p><strong>… is an observable phenomenon.</strong> </p>
+<p><strong>The phenomenon emerges gradually/ occurs frequently.</strong> </p>
+<p><strong>动词，形容词，副词类</strong></p>
+<p><strong>It amazes/startles us to see that…</strong></p>
+<p><strong>The past decade has witnessed…</strong></p>
+<p><strong>The phenomenon prevails among… and still persist.</strong> </p>
+<p><strong>It is remarkable that…</strong></p>
+<p><strong>It is commonplace that…</strong></p>
+<p><strong>It is not uncommon that…</strong></p>
+<p><strong>Not surprisingly, ______.</strong> </p>
+<p><strong>Globally, ________.</strong> </p>
+<p><strong>固定句式类</strong> </p>
+<p><strong>A great deal of attention is being paid to…</strong></p>
+<p><strong>… has aroused /received/ captured/compelled +</strong></p>
+<p>​             <strong>public/media/urgent attention.</strong> </p>
+<p><strong>… should be brought under spotlight.</strong></p>
+<p><strong>样文：</strong></p>
+<p><strong>Education is an essential not an extra. It is an intrinsic right of each one of us rather than the privilege of a few. Then how could we ensure as many students as possible the easy and quick access to education? Attending online course should not be the last resort. Quite the contrary, online eduction is now an accelerating trend. It amazes us to see that students worldwide can attend Massive Open Online Courses (MOOC) and obtain the information they need.</strong> </p>
+<p> <strong>There are many aspects contributing to the popularity of online courses. First, diversity. There are a wide span of courses available online which range from literature to economics and from elementary courses to advanced ones. You can browse the relevant information on open courses websites effortlessly. The merit of online courses is not confined to this. Let’s take a look at the accessibility of such course. Lots of prestigious universities, including Harvard, offer MOOC to students worldwide and some of them are free of charge. To catch a glimpse of the charisma of elite scholars there, you don’t need to travel long distance, Instead, you could instantly watch informative lectures at home by a simple click of the mouse. Last, completing daily routines online is now prevailing. Think about online shopping and online dating. Students might not do without online courses lest they should fall behind the times. Limitation, benefits and drawbacks</strong></p>
+<p><strong>Undeniably, more and more attention is being paid to this new mode of learning. The role of online education in our lives is literally not negligible. It is anticipated that in the foreseeable future a growing proportion of students can benefit considerably from it.</strong> </p>
+<hr>
+<h3 id="社会问题"><a href="#社会问题" class="headerlink" title="社会问题"></a><strong>社会问题</strong></h3><p><strong>__ is</strong></p>
+<p><strong>a(n) adverse/disturbing/worrying trend</strong></p>
+<p><strong>It astonishes/ alarms us to see that…</strong></p>
+<p>  <strong>极为惊讶  焦虑</strong></p>
+<p><strong>a(n) pressing / urgent /immediate/growing problem (question/issue)</strong></p>
+<p><strong>long-term  long-standing</strong> </p>
+<p>​    <strong>acute  grave</strong>  </p>
+<p>​    <strong>knotty.  Thorny</strong> </p>
+<p><strong>Sth poses/creates/ a problem for us.</strong> </p>
+<p><strong>We are confronted by …</strong></p>
+<p><strong>We are beset by… / we are overwhelmed by…</strong></p>
+<p>​     <strong>为。。。所苦恼</strong></p>
+<p><strong>We have to handle/address /tackle/come to grips with /grapple with</strong> </p>
+<p>​                          <strong>努力设法解决</strong></p>
+<p><strong>It’s hard to cure/clear up/overcome/resolve (the problem).</strong></p>
+<p><strong>We should attempt to alleviate /ease it.</strong> </p>
+<p><strong>We cannot evade/circumvent it.</strong> </p>
+<p>​        <strong>逃避      规避</strong> </p>
+<p><strong>究责</strong></p>
+<p><strong>Who is to blame for it?</strong></p>
+<p><strong>We have no one else to blame for this except for ourselves.</strong></p>
+<p><strong>The government should be held accountable for …</strong></p>
+<p><strong>The responsibility rests with …</strong></p>
+<p><strong>解决问题的手段</strong></p>
+<p><strong>We have to take initiative. /Much can be done.</strong> </p>
+<p><strong>We have to take … action. We have to take steps /measures to do</strong> </p>
+<p><strong>…take precaution at/against.</strong> </p>
+<p><strong>…take preventative measures.</strong> </p>
+<p>​     *<strong>appropriate immediate swift   urgent drastic  decisive  vigorous*</strong> </p>
+<p><strong>We have to make …efforts.</strong> </p>
+<p>​    <strong>Conscious  collective  concerted</strong> </p>
+<p><strong>It is preferable /desirable /fitting that sth be done.</strong> </p>
+<p><strong>We should ensure that…</strong></p>
+<p><strong>We should never neglect to do…</strong></p>
+<p><strong>We have no alternative but to do…</strong></p>
+<p><strong>… is a promising start.</strong> </p>
+<p><strong>The initial step is to do…</strong></p>
+<p><strong>It is a big step doing sth.</strong></p>
+<p><strong>Doing sth is an imperative.</strong> </p>
+<p><strong>… is the first/last resort.</strong> </p>
+<p><strong>例题：<em>Write an essay on what human beings have learned about the quick spread of a virus and what should be done to deal with it.</em></strong> </p>
+<p><strong>样文：</strong></p>
+<p><strong>Urgent action is now being taken around the globe to combat the novel coronavirus at present. The epidemic is still raging in spite of it being effectively contained in China. Throughout human history, how to fight against a virus has invariably been a thorny problem.</strong> </p>
+<p><strong>What might account for the swift spread of the virus ? There are many contributing factors. Before anything else, human beings have had very limited knowledge in this sphere. It is no surprising that mankind had long been afflicted by each breakout. Secondly, the increase in the world population has been exponential and the whole world has been much more closely connected than ever before. People travel by air and by train very frequently and effortlessly due to considerable improvement in public transit home and broad. And the increased mobility makes it easier and faster for the virus to be spread from person to person and from country to country.</strong> </p>
+<p><strong>Much can be done to tackle the spread of the virus. To quarantine residents in the virus-hit areas is a promising start. Decreased mobility had been proven to be the simplest and most effective measure to contain the spread in human history. Priority should also be given to how the medical resources can be mobilized in the rescue mission. In China, hundreds of thousands of medics have been dispatched to the infected areas and 1000-bed hospitals have been build within ten days to treat patients. More factories are being called on to manufacture masks and the daily capacity now increases to over 50 millions masks a day. Another concern is that people should be made aware of the potential exposure to viruses again if they still recklessly eat the meat of some wild animals. Last but not the least, more medical experts should dedicate themselves to the development of vaccines against viruses. The process can be time-consuming and strenuous. But we are convinced that the dawn of victory will appear eventually provided that we never relent in our efforts.</strong></p>
+<hr>
+<p><strong>附：考研原刊例句摘选 （注意位置化；功能化）</strong></p>
+<p><em><strong>Only in this way can we be sure that…</strong></em></p>
+<p><em><strong>For centuries, / Globally,  /in the years to come /… is a daily routine.</strong></em> </p>
+<p><em><strong>People have begun to become aware that…</strong></em></p>
+<p><em><strong>It is probably true to say that…</strong></em></p>
+<p><em><strong>underlying the phenomenon is the notion that…</strong></em></p>
+<p><em><strong>It doesn’t come as a surprise to realize that…</strong></em></p>
+<p><em><strong>The question naturally arises: why …</strong></em></p>
+<p><em><strong>Can we anticipate a day when…? It’s probably coming (if…)</strong></em></p>
+<p><em><strong>When considering the merits/drawbacks, __ is of prime importance.</strong></em> </p>
+<p><em><strong>____ add to our worries.</strong></em> </p>
+<p><em><strong>The question of … is much argued by…</strong></em></p>
+<p><em><strong>If we are to _____, it seems imperative not only that sth should be done but also that sth should be done.</strong></em> </p>
+<p><em><strong>The present situation is far from satisfactory though some progress has been made.</strong></em></p>
+<p><em><strong>… is due to the fact that…</strong></em></p>
+<p><em><strong>We desperately need more people who believe that…</strong></em></p>
+<p><em><strong>It is all well to blame …, but _______.</strong></em> </p>
+<p><em><strong>One way of overcoming this difficulty is to …</strong></em></p>
+<p><em><strong>…will continue (persist) as long as…</strong></em></p>
+<p><em><strong>On the whole such a conclusion can be drawn with a certain degree of confidence.</strong></em> </p>
+<p><em><strong>Is … indispensable without which ________?</strong></em></p>
+<p><em><strong>it is also of concern that…</strong></em></p>
+<p><em><strong>If you …, you are not alone</strong></em> </p>
+<p><em><strong>As anyone who has done…knows, ______.</strong></em> </p>
+<p><em><strong>Any small improvement in the realm will make a big impact on….</strong></em></p>
+<p><em><strong>When it comes to___, thinking about both the short-term fixes and long-term approaches.</strong></em> </p>
+<p><em><strong>We can surely harvest…</strong></em></p>
+<hr>
+<p><strong>本文结合自己的阅读与老师笔记整理，全是满满的干货哦，希望对大家有所帮助。</strong></p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>crazy english</tag>
+      </tags>
+  </entry>
+</search>
