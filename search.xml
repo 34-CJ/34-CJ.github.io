@@ -49,132 +49,6 @@
       </tags>
   </entry>
   <entry>
-    <title>c语言指针</title>
-    <url>/2021/09/29/zhizhen/</url>
-    <content><![CDATA[<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a><em><strong><u>指针</u></strong></em></h1><h2 id="指针的重要性"><a href="#指针的重要性" class="headerlink" title="指针的重要性"></a><strong>指针的重要性</strong></h2><p><strong>表示一些复杂的数据结构  快速的传递数据，减少了内存的耗用  使函数返回 1个以上的值</strong> </p>
-<p><strong>能直接访问硬件 能够方便的处理字符串 是理解面向对象语言中引用的基础</strong> </p>
-<p><strong>总结:指针是c语言的灵魂</strong> </p>
-<hr>
-<h2 id="指针的定义"><a href="#指针的定义" class="headerlink" title="指针的定义"></a><strong>指针的定义</strong></h2><p><strong>地址</strong> </p>
-<p><strong>内存单元的编号 从零开始的非负整数 范围 :4G [ O- 4G- l ]</strong></p>
-<p> <strong>指针</strong> </p>
-<p><strong>指针就是地址， 地址就是指针</strong> </p>
-<p><strong>指针变量就是存放内存单元编号的变量，或者说指针变量就是存放地址的变量 指针和指针变量是两个不同的概念</strong> </p>
-<p><strong>但是要注意: 通常我们叙述时会把指针变量简称为指针，实际它们含义并不 指针的本质就是一个操作受限的非负整数</strong> </p>
-<hr>
-<h2 id="指针的分类"><a href="#指针的分类" class="headerlink" title="指针的分类"></a><strong>指针的分类</strong></h2><ol>
-<li><strong>基本类型指针</strong> </li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> * p; <span class="comment">//p是变量的名字， int *表示 p变量存放的是int类型变量的地址//int * p; 不表示定义了一个名字叫做*p的变量** </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> j;</span><br><span class="line">p = &amp;i; </span><br></pre></td></tr></table></figure>
-
-
-
-<ol>
-<li><p><strong>p保存了i的地址，因此p指向i</strong></p>
-</li>
-<li><p><strong>p不是i， i也不是p ，更准确的说: 修改p 的值不影响i 的值，修改 i的值也不会影响p 的值 如果一个指针变量指向 个普通变量，则   指针变量就完全等同于普通变量</strong></p>
-<p><strong>例子：如果 p是个指针变量，并且 p存放了普通变量 i的地址 。则p 指向了普通变量i</strong></p>
-<p> *<strong>p 就完全等同于 i</strong> </p>
-<p> <strong>或者说 在所有出现*p的地方都可以替换成i</strong></p>
-<p> <strong>在所有出现i的地方都可以替换成句<em>p</em></strong></p>
-<p>*<em>最准确的解释是:<em>p表示的是以p 的内容为地址的变量</em></em></p>
-<p><strong>附注:</strong> </p>
-<p>*<strong>的含义 1.乘法</strong> </p>
-<ol start="2">
-<li><p>*<em>定义指针变量 int * p;  //定义了一个名字叫p的变量， int <em>表示p 只能存放int变量的地址</em></em> </p>
-</li>
-<li><p><strong>指针运算符</strong> </p>
-<p><strong>该运算符放在已经定义好的指针变量的前面 如果p 是一个已经定义好的指针变量 则*p表示以p 的内容为地址的变量</strong></p>
-<p> <strong>如何通过被调函数修改主调函数普通变量的值</strong></p>
-<p> <strong>1.实参必须为该普通变量的地址</strong> </p>
-<ol start="2">
-<li><p><strong>形参必须为指针变量</strong></p>
-</li>
-<li><p><strong>在被调函数中通过</strong></p>
-<p> *<strong>形参名.. .</strong>  </p>
-<p><strong>的方式就可以修改主调函数相关变量的值</strong></p>
-</li>
-</ol>
-</li>
-<li><p><strong>指针和数组</strong> </p>
-<p><strong>指针和一维数组</strong> </p>
-<p><strong>一维数组名</strong> </p>
-<p><strong>一维数组名 是个指针常量</strong> </p>
-<p><strong>它存放的是一维数组第一个元素的地址</strong> </p>
-<p>下标和指针的关系如果p是个指针变量,则p[i]永远等价于* (p+i)</p>
-<p><strong>确定一个一维数组需要几个参数【如一个函数要处理一个一维数组，则要接收该数组的哪些信息】</strong></p>
-<p> <strong>需要两个参数: 数组第一个元素的地址 数组的长度</strong></p>
-<p> <strong>指针变量的运算</strong></p>
-<p> <strong>指针变量不能相加  不能相乘   也不能相除</strong> </p>
-<p><strong>如果两个指针变量指向的是同一块连续空间中的不同存储单元， 则这两个指针变量才可以相减</strong></p>
-<h2 id="指针与数组的对比"><a href="#指针与数组的对比" class="headerlink" title="指针与数组的对比"></a>指针与数组的对比</h2></li>
-</ol>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center"><strong>指针</strong></th>
-<th align="center"><strong>数组</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>保存数据的地址，任何存入指针变量p的数据都会被当作地址来处理。p本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
-<td align="center"><strong>保存数据，数组名a代表的是数组首元素的首地址而不是数组的首地址。&amp;a才是整个数组的首地址。 a本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>间接访问数据，首先取得指针变量p的内容，把它作为地址，然后从这个地址提取数据或向这个地址写入数据。指针可以以指针的形式访问*(p+i);也可以以下标的形式访问p[i]。但其本质都是先取p的内容然后加上i *sizeof(类型)个byte作为数据的真正地址。</strong></td>
-<td align="center"><strong>直接访问数据， 数组名a是整个数组的名字，数组内每个元素 并没有名字。只能通过“具名+匿名” 的方式来访问其某个元素，不能把数组当一个整体 来进行读写操作。数组可以以指针的形式访问*(a+i);也可以以下标的形式访 问a[i].但其本质都是a所代表的数组首元素的首地址加上i*sizeof(类型)个byte作为数据的真正地址。</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>通常用于动态数据结构</strong></td>
-<td align="center"><strong>通常用于存储固定数目且数据类型相同的元</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>相关的函数为malloc和free.</strong></td>
-<td align="center"><strong>隐式分配和删除</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>通常指向匿名数据(当然也可指向具名数据）</strong></td>
-<td align="center"><strong>自身即为数组名</strong></td>
-</tr>
-</tbody></table>
-<h2 id="指针与二维数组"><a href="#指针与二维数组" class="headerlink" title="指针与二维数组"></a><strong>指针与二维数组</strong></h2><h3 id="指针与函数"><a href="#指针与函数" class="headerlink" title="指针与函数"></a><strong>指针与函数</strong></h3><h3 id="指针与结构体"><a href="#指针与结构体" class="headerlink" title="指针与结构体"></a><strong>指针与结构体</strong></h3><h3 id="多级指针"><a href="#多级指针" class="headerlink" title="多级指针"></a><strong>多级指针</strong></h3><p><strong>例：</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i =<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p=i;   <span class="comment">//p只能存放int类型变量的地址</span></span><br><span class="line"><span class="keyword">int</span> ** q=&amp;p;  / /q <span class="keyword">int</span> **类型， 所谓<span class="keyword">int</span> **类型就是指q只能存放<span class="keyword">int</span> *类型变的地址</span><br><span class="line"><span class="keyword">int</span> ***r= &amp;q; <span class="comment">//r int ***类型，所谓 int ***类型就是指r只能存放int **类型变量的地址</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="动态分配内存（重难点）"><a href="#动态分配内存（重难点）" class="headerlink" title="动态分配内存（重难点）"></a><strong>动态分配内存（重难点）</strong></h4><p><strong>传统数组的缺点:</strong> </p>
-<ol>
-<li><p><strong>数组长度必须事先制定，且只能是常整数，不能是变量</strong></p>
-<p><strong>例子:</strong> </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]; <span class="comment">//OK</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">int</span> len = <span class="number">5</span>; <span class="keyword">int</span> a[len]; <span class="comment">//error </span></span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li><p><strong>传统形式定义的数组，该数组的内存程序员无法手动释放 。在一个函数运行期间，系统为该函数中数组所分配的空间 会一直存在， 直到该函 数运行完毕肘，数组的 间才会被 系统释放</strong></p>
-</li>
-<li><p><strong>数组的长度一旦定义，其长度就不能再更改</strong> </p>
-<p> <strong>数组的长度不能在函数运行的过程中动态的扩充或缩小</strong></p>
-</li>
-<li><p><strong>A函数定义的数组，在 A函数运行期间可以被其它函数使用， 但A函数运行完毕之后， A函数中的数组将无法在被其他 函数使用</strong></p>
-<p><strong>传统方式定义的数组不能跨函数使用</strong></p>
-</li>
-</ol>
-</li>
-</ol>
-<h4 id="为什么要动态分配内存"><a href="#为什么要动态分配内存" class="headerlink" title="为什么要动态分配内存"></a><strong>为什么要动态分配内存</strong></h4><p><strong>动态数组很好的解决了传统数组的这4个缺陷</strong> </p>
-<p><strong>传统数组也叫静态数组</strong></p>
-<hr>
-<p><strong>😩努力在学习中，后续更新哦~</strong></p>
-]]></content>
-      <categories>
-        <category>c语言</category>
-      </categories>
-      <tags>
-        <tag>指针</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语作文笔记分享</title>
     <url>/2021/09/29/yingyu/</url>
     <content><![CDATA[<p><strong>1. 词： “出彩的”书面用词（一句一亮点）+ 四大类文章和论证逻辑必用词</strong></p>
@@ -374,6 +248,132 @@
       </categories>
       <tags>
         <tag>crazy english</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c语言指针</title>
+    <url>/2021/09/29/zhizhen/</url>
+    <content><![CDATA[<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a><em><strong><u>指针</u></strong></em></h1><h2 id="指针的重要性"><a href="#指针的重要性" class="headerlink" title="指针的重要性"></a><strong>指针的重要性</strong></h2><p><strong>表示一些复杂的数据结构  快速的传递数据，减少了内存的耗用  使函数返回 1个以上的值</strong> </p>
+<p><strong>能直接访问硬件 能够方便的处理字符串 是理解面向对象语言中引用的基础</strong> </p>
+<p><strong>总结:指针是c语言的灵魂</strong> </p>
+<hr>
+<h2 id="指针的定义"><a href="#指针的定义" class="headerlink" title="指针的定义"></a><strong>指针的定义</strong></h2><p><strong>地址</strong> </p>
+<p><strong>内存单元的编号 从零开始的非负整数 范围 :4G [ O- 4G- l ]</strong></p>
+<p> <strong>指针</strong> </p>
+<p><strong>指针就是地址， 地址就是指针</strong> </p>
+<p><strong>指针变量就是存放内存单元编号的变量，或者说指针变量就是存放地址的变量 指针和指针变量是两个不同的概念</strong> </p>
+<p><strong>但是要注意: 通常我们叙述时会把指针变量简称为指针，实际它们含义并不 指针的本质就是一个操作受限的非负整数</strong> </p>
+<hr>
+<h2 id="指针的分类"><a href="#指针的分类" class="headerlink" title="指针的分类"></a><strong>指针的分类</strong></h2><ol>
+<li><strong>基本类型指针</strong> </li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> * p; <span class="comment">//p是变量的名字， int *表示 p变量存放的是int类型变量的地址//int * p; 不表示定义了一个名字叫做*p的变量** </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> j;</span><br><span class="line">p = &amp;i; </span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li><p><strong>p保存了i的地址，因此p指向i</strong></p>
+</li>
+<li><p><strong>p不是i， i也不是p ，更准确的说: 修改p 的值不影响i 的值，修改 i的值也不会影响p 的值 如果一个指针变量指向 个普通变量，则   指针变量就完全等同于普通变量</strong></p>
+<p><strong>例子：如果 p是个指针变量，并且 p存放了普通变量 i的地址 。则p 指向了普通变量i</strong></p>
+<p> *<strong>p 就完全等同于 i</strong> </p>
+<p> <strong>或者说 在所有出现*p的地方都可以替换成i</strong></p>
+<p> <strong>在所有出现i的地方都可以替换成句<em>p</em></strong></p>
+<p>*<em>最准确的解释是:<em>p表示的是以p 的内容为地址的变量</em></em></p>
+<p><strong>附注:</strong> </p>
+<p>*<strong>的含义 1.乘法</strong> </p>
+<ol start="2">
+<li><p>*<em>定义指针变量 int * p;  //定义了一个名字叫p的变量， int <em>表示p 只能存放int变量的地址</em></em> </p>
+</li>
+<li><p><strong>指针运算符</strong> </p>
+<p><strong>该运算符放在已经定义好的指针变量的前面 如果p 是一个已经定义好的指针变量 则*p表示以p 的内容为地址的变量</strong></p>
+<p> <strong>如何通过被调函数修改主调函数普通变量的值</strong></p>
+<p> <strong>1.实参必须为该普通变量的地址</strong> </p>
+<ol start="2">
+<li><p><strong>形参必须为指针变量</strong></p>
+</li>
+<li><p><strong>在被调函数中通过</strong></p>
+<p> *<strong>形参名.. .</strong>  </p>
+<p><strong>的方式就可以修改主调函数相关变量的值</strong></p>
+</li>
+</ol>
+</li>
+<li><p><strong>指针和数组</strong> </p>
+<p><strong>指针和一维数组</strong> </p>
+<p><strong>一维数组名</strong> </p>
+<p><strong>一维数组名 是个指针常量</strong> </p>
+<p><strong>它存放的是一维数组第一个元素的地址</strong> </p>
+<p>下标和指针的关系如果p是个指针变量,则p[i]永远等价于* (p+i)</p>
+<p><strong>确定一个一维数组需要几个参数【如一个函数要处理一个一维数组，则要接收该数组的哪些信息】</strong></p>
+<p> <strong>需要两个参数: 数组第一个元素的地址 数组的长度</strong></p>
+<p> <strong>指针变量的运算</strong></p>
+<p> <strong>指针变量不能相加  不能相乘   也不能相除</strong> </p>
+<p><strong>如果两个指针变量指向的是同一块连续空间中的不同存储单元， 则这两个指针变量才可以相减</strong></p>
+<h2 id="指针与数组的对比"><a href="#指针与数组的对比" class="headerlink" title="指针与数组的对比"></a>指针与数组的对比</h2></li>
+</ol>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>指针</strong></th>
+<th align="center"><strong>数组</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>保存数据的地址，任何存入指针变量p的数据都会被当作地址来处理。p本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
+<td align="center"><strong>保存数据，数组名a代表的是数组首元素的首地址而不是数组的首地址。&amp;a才是整个数组的首地址。 a本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>间接访问数据，首先取得指针变量p的内容，把它作为地址，然后从这个地址提取数据或向这个地址写入数据。指针可以以指针的形式访问*(p+i);也可以以下标的形式访问p[i]。但其本质都是先取p的内容然后加上i *sizeof(类型)个byte作为数据的真正地址。</strong></td>
+<td align="center"><strong>直接访问数据， 数组名a是整个数组的名字，数组内每个元素 并没有名字。只能通过“具名+匿名” 的方式来访问其某个元素，不能把数组当一个整体 来进行读写操作。数组可以以指针的形式访问*(a+i);也可以以下标的形式访 问a[i].但其本质都是a所代表的数组首元素的首地址加上i*sizeof(类型)个byte作为数据的真正地址。</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>通常用于动态数据结构</strong></td>
+<td align="center"><strong>通常用于存储固定数目且数据类型相同的元</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>相关的函数为malloc和free.</strong></td>
+<td align="center"><strong>隐式分配和删除</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>通常指向匿名数据(当然也可指向具名数据）</strong></td>
+<td align="center"><strong>自身即为数组名</strong></td>
+</tr>
+</tbody></table>
+<h2 id="指针与二维数组"><a href="#指针与二维数组" class="headerlink" title="指针与二维数组"></a><strong>指针与二维数组</strong></h2><h3 id="指针与函数"><a href="#指针与函数" class="headerlink" title="指针与函数"></a><strong>指针与函数</strong></h3><h3 id="指针与结构体"><a href="#指针与结构体" class="headerlink" title="指针与结构体"></a><strong>指针与结构体</strong></h3><h3 id="多级指针"><a href="#多级指针" class="headerlink" title="多级指针"></a><strong>多级指针</strong></h3><p><strong>例：</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i =<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p=i;   <span class="comment">//p只能存放int类型变量的地址</span></span><br><span class="line"><span class="keyword">int</span> ** q=&amp;p;  / /q <span class="keyword">int</span> **类型， 所谓<span class="keyword">int</span> **类型就是指q只能存放<span class="keyword">int</span> *类型变的地址</span><br><span class="line"><span class="keyword">int</span> ***r= &amp;q; <span class="comment">//r int ***类型，所谓 int ***类型就是指r只能存放int **类型变量的地址</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="动态分配内存（重难点）"><a href="#动态分配内存（重难点）" class="headerlink" title="动态分配内存（重难点）"></a><strong>动态分配内存（重难点）</strong></h4><p><strong>传统数组的缺点:</strong> </p>
+<ol>
+<li><p><strong>数组长度必须事先制定，且只能是常整数，不能是变量</strong></p>
+<p><strong>例子:</strong> </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]; <span class="comment">//OK</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">int</span> len = <span class="number">5</span>; <span class="keyword">int</span> a[len]; <span class="comment">//error </span></span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li><p><strong>传统形式定义的数组，该数组的内存程序员无法手动释放 。在一个函数运行期间，系统为该函数中数组所分配的空间 会一直存在， 直到该函 数运行完毕肘，数组的 间才会被 系统释放</strong></p>
+</li>
+<li><p><strong>数组的长度一旦定义，其长度就不能再更改</strong> </p>
+<p> <strong>数组的长度不能在函数运行的过程中动态的扩充或缩小</strong></p>
+</li>
+<li><p><strong>A函数定义的数组，在 A函数运行期间可以被其它函数使用， 但A函数运行完毕之后， A函数中的数组将无法在被其他 函数使用</strong></p>
+<p><strong>传统方式定义的数组不能跨函数使用</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="为什么要动态分配内存"><a href="#为什么要动态分配内存" class="headerlink" title="为什么要动态分配内存"></a><strong>为什么要动态分配内存</strong></h4><p><strong>动态数组很好的解决了传统数组的这4个缺陷</strong> </p>
+<p><strong>传统数组也叫静态数组</strong></p>
+<hr>
+<p><strong>😩努力在学习中，后续更新哦~</strong></p>
+]]></content>
+      <categories>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>指针</tag>
       </tags>
   </entry>
 </search>
