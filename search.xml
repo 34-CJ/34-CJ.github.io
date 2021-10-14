@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello-My world</title>
+    <url>/2021/09/20/hello-world/</url>
+    <content><![CDATA[<h1 id="你好，我的博客"><a href="#你好，我的博客" class="headerlink" title="你好，我的博客"></a><em>你好，我的博客</em></h1><p>毫不夸张地说，这两天一直处于亢奋状态😂。</p>
+<p>基本框架及主题配置搭建完成后，真的就感觉这就是属于自己的小世界，奇妙的感觉。带着期望与激动的情绪去完成自己的心愿始终是妙不可言的事情。</p>
+<p>经历过大大小小的坑，甚至删除仓库重新做一次，对此十分的感动和珍惜。在此感谢身边的两位大佬哈哈，向你们学习，从今天起，我会更加努力学习，不断更新所学所感。</p>
+<hr>
+<p>欢迎大家光临我的博客园，希望有东西能帮助到你们，各位大佬如有建议可以联系</p>
+<p>QQ：2530115347</p>
+<p>wechat: h15585030161</p>
+<hr>
+<p>😊<strong>以此纪念真正意义的开站第一天~</strong></p>
+]]></content>
+      <tags>
+        <tag>我</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>家庭收支记账项目</title>
     <url>/2021/10/09/project01/</url>
     <content><![CDATA[<h1 id="家庭收支记账项目"><a href="#家庭收支记账项目" class="headerlink" title="家庭收支记账项目"></a><strong>家庭收支记账项目</strong></h1><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h2><h3 id="1-主界面"><a href="#1-主界面" class="headerlink" title="1.主界面"></a><strong>1.主界面</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">FamilyAccount</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;-------------家庭收支记账软件------------\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                1 收支明细&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                2 登记收入&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                3 登记支出&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                4退    出\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -29,23 +46,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello-My world</title>
-    <url>/2021/09/20/hello-world/</url>
-    <content><![CDATA[<h1 id="你好，我的博客"><a href="#你好，我的博客" class="headerlink" title="你好，我的博客"></a><em>你好，我的博客</em></h1><p>毫不夸张地说，这两天一直处于亢奋状态😂。</p>
-<p>基本框架及主题配置搭建完成后，真的就感觉这就是属于自己的小世界，奇妙的感觉。带着期望与激动的情绪去完成自己的心愿始终是妙不可言的事情。</p>
-<p>经历过大大小小的坑，甚至删除仓库重新做一次，对此十分的感动和珍惜。在此感谢身边的两位大佬哈哈，向你们学习，从今天起，我会更加努力学习，不断更新所学所感。</p>
-<hr>
-<p>欢迎大家光临我的博客园，希望有东西能帮助到你们，各位大佬如有建议可以联系</p>
-<p>QQ：2530115347</p>
-<p>wechat: h15585030161</p>
-<hr>
-<p>😊<strong>以此纪念真正意义的开站第一天~</strong></p>
-]]></content>
-      <tags>
-        <tag>我</tag>
       </tags>
   </entry>
   <entry>
