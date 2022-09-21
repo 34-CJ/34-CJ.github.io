@@ -141,8 +141,3 @@
     init();
 })();
 
-
-作者: Ethan.Tzy
-链接: https://ethant.top/articles/hexo541u/#%E9%BC%A0%E6%A0%87-%E5%AD%97%E8%B7%9F%E9%9A%8F%E6%A0%B7%E5%BC%8F
-来源: 唐先森の博客
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
