@@ -89,6 +89,491 @@
       </tags>
   </entry>
   <entry>
+    <title>家庭收支记账项目</title>
+    <url>/2021/10/09/project01/</url>
+    <content><![CDATA[<h1 id="家庭收支记账项目"><a href="#家庭收支记账项目" class="headerlink" title="家庭收支记账项目"></a><strong>家庭收支记账项目</strong></h1><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h2><h3 id="1-主界面"><a href="#1-主界面" class="headerlink" title="1.主界面"></a><strong>1.主界面</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">FamilyAccount</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;-------------家庭收支记账软件------------\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                1 收支明细&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                2 登记收入&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                3 登记支出&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                4退    出\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-加入选择结构的流程控制语句"><a href="#2-加入选择结构的流程控制语句" class="headerlink" title="2.加入选择结构的流程控制语句"></a><strong>2.加入选择结构的流程控制语句</strong></h2><h3 id="1-接受用户的选择"><a href="#1-接受用户的选择" class="headerlink" title="(1)接受用户的选择"></a><strong>(1)接受用户的选择</strong></h3><p><strong>char selection = Utility.readMenuSelection();</strong></p>
+<h3 id="2-根据用户的选择，执行不同的语句"><a href="#2-根据用户的选择，执行不同的语句" class="headerlink" title="(2)根据用户的选择，执行不同的语句"></a><strong>(2)根据用户的选择，执行不同的语句</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">char</span> selection = Utility.readMenuSelection();</span><br><span class="line">			<span class="keyword">switch</span>(selection)&#123;</span><br><span class="line">				</span><br><span class="line">			    <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">					<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">				System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">				System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">                <span class="comment">//登记支出</span></span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line"></span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">                <span class="comment">//退出</span></span><br><span class="line">					System.out.print(<span class="string">&quot;确认是否退出(Y/N):&quot;</span>);</span><br><span class="line">                    <span class="comment">//待补充</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-功能能够循环使用"><a href="#3-功能能够循环使用" class="headerlink" title="3.功能能够循环使用"></a><strong>3.功能能够循环使用</strong></h2><h3 id="（1）加入循环"><a href="#（1）加入循环" class="headerlink" title="（1）加入循环"></a><strong>（1）加入循环</strong></h3><h2 id="登记收入"><a href="#登记收入" class="headerlink" title="登记收入"></a><strong>登记收入</strong></h2><h3 id="（1）从键盘输入信息"><a href="#（1）从键盘输入信息" class="headerlink" title="（1）从键盘输入信息"></a><strong>（1）从键盘输入信息</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line"><span class="keyword">int</span> addMoney = Utility.readNumber();</span><br><span class="line">System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">String addInfo = Utility.readString();</span><br><span class="line"><span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="调整余额、串接信息"><a href="#调整余额、串接信息" class="headerlink" title="调整余额、串接信息"></a><strong>调整余额、串接信息</strong></h4><p><strong>基本金的记录可以使用 int 类型的局部变量来实现：</strong></p>
+<p> <strong>int balance = 10000;</strong></p>
+<p> <strong>收支明细记录可以使用 Sting 类型的变量来实现，其初始值为明细表的表头。例如：String details = “收支\t 账户金额\t 收支金额\t 说 明\n”;</strong> </p>
+<p><strong>在登记收支时，将收支金额与 balance 相加或相减，收支记录直接串接到 details 后面即可。</strong> </p>
+<p><strong>说明：因为余额和明细信息是多个功能，以及在程序退出之前多次登记是共享的，因此必须 把这两个变量声明在循环之上</strong></p>
+<h2 id="2-登记支出"><a href="#2-登记支出" class="headerlink" title="2.登记支出"></a><strong>2.登记支出</strong></h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> minusMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				String minusInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(balance &gt;=minusMoney)&#123;</span><br><span class="line">					balance -= minusMoney;</span><br><span class="line"></span><br><span class="line">					details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> +minusMoney + <span class="string">&quot;\t\t&quot;</span> + minusInfo +<span class="string">&quot;\n&quot;</span>); </span><br><span class="line">				&#125;<span class="keyword">else</span> </span><br><span class="line">				&#123;</span><br><span class="line">					System.out.print(<span class="string">&quot;支付超出账户额度，支付失败&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-收支明细"><a href="#3-收支明细" class="headerlink" title="3.收支明细"></a><strong>3.收支明细</strong></h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">				<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">			System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">			System.out.println(details);</span><br><span class="line">			System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="总结，完整代码为："><a href="#总结，完整代码为：" class="headerlink" title="总结，完整代码为："></a><strong>总结，完整代码为：</strong></h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">FamilyAccount</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	   <span class="keyword">boolean</span> isFlag = <span class="keyword">true</span>;</span><br><span class="line">	   <span class="keyword">int</span> balance = <span class="number">10000</span>;</span><br><span class="line"></span><br><span class="line">	   String details = <span class="string">&quot;收支\t账户金额\t收支金额\t说  明\n&quot;</span>;</span><br><span class="line">	   <span class="keyword">while</span> (isFlag)</span><br><span class="line">	   &#123;</span><br><span class="line">		   System.out.println(<span class="string">&quot;-------------家庭收支记账软件------------\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                1 收支明细&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                2 登记收入&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                3 登记支出&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                4退    出\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">char</span> selection = Utility.readMenuSelection();</span><br><span class="line">			<span class="keyword">switch</span>(selection)&#123;</span><br><span class="line">				</span><br><span class="line">			    <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">					<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">				System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">				System.out.println(details);</span><br><span class="line">				System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> addMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">				String addInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				balance +=  addMoney;</span><br><span class="line"></span><br><span class="line">				details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> + addMoney + <span class="string">&quot;\t\t&quot;</span> + addInfo +<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> minusMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				String minusInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(balance &gt;=minusMoney)&#123;</span><br><span class="line">					balance -= minusMoney;</span><br><span class="line"></span><br><span class="line">					details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> +minusMoney + <span class="string">&quot;\t\t&quot;</span> + minusInfo +<span class="string">&quot;\n&quot;</span>); </span><br><span class="line">				&#125;<span class="keyword">else</span> </span><br><span class="line">				&#123;</span><br><span class="line">					System.out.print(<span class="string">&quot;支付超出账户额度，支付失败&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">					System.out.print(<span class="string">&quot;确认是否退出(Y/N):&quot;</span>);</span><br><span class="line">					<span class="keyword">char</span> isExit = Utility.readConfirmSelection();</span><br><span class="line">					<span class="keyword">if</span> (isExit ==<span class="string">&#x27;Y&#x27;</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						isFlag =<span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">	   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉树顺序结构存储算法</title>
+    <url>/2022/09/21/project02/</url>
+    <content><![CDATA[<p>代码实现：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 8</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//初始化二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EmptyTree</span><span class="params">(<span class="keyword">int</span> Tree[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;MAX_SIZE;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        Tree[i]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给i节点赋值操作</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setNode</span><span class="params">(<span class="keyword">int</span> Tree[],<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Tree == <span class="literal">NULL</span>) &#123;<span class="built_in">printf</span>(<span class="string">&quot;二叉树为空&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=MAX_SIZE) &#123;<span class="built_in">printf</span>(<span class="string">&quot;超出数组范围&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    Tree[i]=x;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给i节点的左孩子设置值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setLeftChild</span><span class="params">(<span class="keyword">int</span> Tree[],<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Tree == <span class="literal">NULL</span>) &#123;<span class="built_in">printf</span>(<span class="string">&quot;二叉树为空&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">if</span>(i*<span class="number">2</span> &gt;= MAX_SIZE) &#123;<span class="built_in">printf</span>(<span class="string">&quot;超出数组范围&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    Tree[i*<span class="number">2</span>]=x;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给i节点的右孩子设置值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setRightChild</span><span class="params">(<span class="keyword">int</span> Tree[],<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Tree == <span class="literal">NULL</span>) &#123;<span class="built_in">printf</span>(<span class="string">&quot;二叉树为空&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">if</span>(i*<span class="number">2</span>+<span class="number">1</span> &gt;= MAX_SIZE) &#123;<span class="built_in">printf</span>(<span class="string">&quot;超出数组范围&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    Tree[i*<span class="number">2</span>+<span class="number">1</span>]=x;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printTree</span><span class="params">(<span class="keyword">int</span> Tree[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_SIZE;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,Tree[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> Tree[MAX_SIZE];</span><br><span class="line">    EmptyTree(Tree);</span><br><span class="line"> </span><br><span class="line">    setNode(Tree,<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">    setLeftChild(Tree,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    setRightChild(Tree,<span class="number">1</span>,<span class="number">3</span>);</span><br><span class="line"> </span><br><span class="line">    setRightChild(Tree,<span class="number">2</span>,<span class="number">4</span>);</span><br><span class="line"> </span><br><span class="line">    setLeftChild(Tree,<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"> </span><br><span class="line">    printTree(Tree);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>c语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初识sql语句</title>
+    <url>/2022/09/22/sql/</url>
+    <content><![CDATA[<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h3 id="存储数据的演变过程"><a href="#存储数据的演变过程" class="headerlink" title="存储数据的演变过程"></a>存储数据的演变过程</h3><ul>
+<li><p>随意的存到一个文件中、数据格式也是千差万别的完全取决于我们自己</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"># 小李</span></span><br><span class="line"><span class="string">jason|123|NB</span></span><br><span class="line"><span class="string"># 小王</span></span><br><span class="line"><span class="string">egon-123-DBJ</span></span><br><span class="line"><span class="string"># 小红</span></span><br><span class="line"><span class="string">tank~123~hecha</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>软件开发目录规范</p>
+<p>限制了存储数据的具体位置</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">bin</span></span><br><span class="line"><span class="string">conf</span></span><br><span class="line"><span class="string">core</span></span><br><span class="line"><span class="string">db</span></span><br><span class="line"><span class="string">lib</span></span><br><span class="line"><span class="string">readme</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>假设上述是一个单机游戏</p>
+<p>那么每个人的游戏记录只会在自己的计算机上面保存</p>
+<p>注册登录的账号也只能在自己的计算机上有效</p>
+</li>
+<li><p>如何将单机变成连网</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">将数据库保存部分全部统一起来</span></span><br><span class="line"><span class="string">所有人操作数据都来一个地方操作</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="数据库的本质"><a href="#数据库的本质" class="headerlink" title="数据库的本质"></a>数据库的本质</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">本质其实就是一款基于网络通信的应用程序</span></span><br><span class="line"><span class="string">那其实每个人都可以开发一款数据库软件 因为它仅仅就是一个基于网络通信的应用程序</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">也就意味着数据库软件其实有很多很多</span></span><br><span class="line"><span class="string">	关系型数据库</span></span><br><span class="line"><span class="string">		MySQL、oracle、db2、access、sql server</span></span><br><span class="line"><span class="string">	非关系型数据库</span></span><br><span class="line"><span class="string">		redis、mongodb、memcache</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 关系型</span></span><br><span class="line">	<span class="number">1</span> 数据之间彼此有关系或者约束</span><br><span class="line">    	男生表和前女友表</span><br><span class="line">    <span class="number">2</span> 存储数据的表现形式通常是以表格存储	</span><br><span class="line">    	name     password		hobby</span><br><span class="line">        jason	  <span class="number">123</span>			学习</span><br><span class="line">        egon	  <span class="number">123</span>			女教练</span><br><span class="line">        tank	  <span class="number">123</span>			吃生蚝</span><br><span class="line">        每个字段还会有存储类型的限制</span><br><span class="line">        比如姓名只能存字符串...</span><br><span class="line"><span class="comment"># 非关系型</span></span><br><span class="line">	存储数据通常都是以k,v键值对的形式</span><br></pre></td></tr></table></figure>
+
+<h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">任何基于网络通信的应用程序底层用的都是socket</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-服务端</span></span><br><span class="line"><span class="string">	-基于socket通信</span></span><br><span class="line"><span class="string">	-收发消息</span></span><br><span class="line"><span class="string">	-SQL语句</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-客户端</span></span><br><span class="line"><span class="string">	-基于socket通信</span></span><br><span class="line"><span class="string">	-收发消息</span></span><br><span class="line"><span class="string">	-SQL语句</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">MySQL不单单支持MySQL自己的客户端app还支持其他编程语言来充当客户端操作</span><br><span class="line">	如何解决语言沟通的障碍？</span><br><span class="line">    	<span class="comment"># 1 让服务端兼容所有的语言(一个人精通多国语言)</span></span><br><span class="line">        <span class="comment"># 2 采用统一的语言(SQL语句)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="重要概念介绍"><a href="#重要概念介绍" class="headerlink" title="重要概念介绍"></a>重要概念介绍</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">库 			》》》			 文件夹</span></span><br><span class="line"><span class="string">表			》》》			 文件</span></span><br><span class="line"><span class="string">记录		   》》》			文件内一行行的数据</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    	name     password		hobby</span></span><br><span class="line"><span class="string">        jason	  123			学习</span></span><br><span class="line"><span class="string">        egon	  123			女教练</span></span><br><span class="line"><span class="string">        tank	  123			吃生蚝</span></span><br><span class="line"><span class="string">表头				表格的第一行字段</span></span><br><span class="line"><span class="string">字段				name、password、hobby</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="MySQL的安装"><a href="#MySQL的安装" class="headerlink" title="MySQL的安装"></a>MySQL的安装</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">在IT界 一般都不会轻易的使用最新版本的软件，因为新版本可能会出现各种问题</span></span><br><span class="line"><span class="string">(你原本项目跑的好好的 非要画蛇添足更新版本 然后项目奔溃)</span></span><br><span class="line"><span class="string">小段子:</span></span><br><span class="line"><span class="string">	更新完没事 那么你还是一个普通员工</span></span><br><span class="line"><span class="string">	更新完出事 那么你就是一名&quot;烈士&quot;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># MySQL有很多版本(5.6、5.7、8.0) 目前企业里面用的比较多的还是5.6左右</span></span><br></pre></td></tr></table></figure>
+
+<p>参考网站:<a href="https://www.mysql.com/">https://www.mysql.com/</a></p>
+<p>下载5.6版本即可</p>
+<h4 id="MySQL服务端与客户端"><a href="#MySQL服务端与客户端" class="headerlink" title="MySQL服务端与客户端"></a>MySQL服务端与客户端</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">服务端</span></span><br><span class="line"><span class="string">mysqld.exe</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">客户端</span></span><br><span class="line"><span class="string">mysql.exe</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">在前期配置MySQL的时候 cmd终端尽量以管理员的身份运行</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">windows+r 输入cmd  进入的是普通用户终端 有一些命令是无法执行的</span></span><br><span class="line"><span class="string">搜索cmd右键 以管理员身份运行</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><ul>
+<li><p>先切换到mysqld所在的bin目录下，然后输入mysqld即可</p>
+</li>
+<li><p>保留原来的cmd窗口重新打开一个</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">常见软件的默认端口号</span></span><br><span class="line"><span class="string">	MySQL  3306</span></span><br><span class="line"><span class="string">	redis  6379</span></span><br><span class="line"><span class="string">	mongodb 27017</span></span><br><span class="line"><span class="string">	django  8000</span></span><br><span class="line"><span class="string">	flask   5000</span></span><br><span class="line"><span class="string">	...</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">MySQL第一次以管理员身份进入是没有密码的 直接回车即可</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">客户端连接服务端完整命令</span></span><br><span class="line"><span class="string">	mysql -h 127.0.0.1 -P 3306 -uroot -p</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="sql语句初识"><a href="#sql语句初识" class="headerlink" title="sql语句初识"></a>sql语句初识</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">1 MySQL中的sql语句是以分号作为结束的标志</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2 基本命令</span></span><br><span class="line"><span class="string">	show databases;  查看所有的库名</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3 连接服务端的命令可以简写</span></span><br><span class="line"><span class="string">	mysql -uroot -p</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">4 当你输入的命令不对 又不想让服务端执行并返回报错信息 可以用\c取消</span></span><br><span class="line"><span class="string">	错误命令  \c</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5 客户端退出  退出命令加不加分号都可以执行</span></span><br><span class="line"><span class="string">	quit</span></span><br><span class="line"><span class="string">	exit</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">6 当你在连接服务端的时候 发现只输入mysql也能连接</span></span><br><span class="line"><span class="string">	但是你不是管理员身份 而只是一个游客模式</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="环境变量配置及系统服务制作"><a href="#环境变量配置及系统服务制作" class="headerlink" title="环境变量配置及系统服务制作"></a>环境变量配置及系统服务制作</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">1 如何查看当前具体进程</span></span><br><span class="line"><span class="string">	tasklist</span></span><br><span class="line"><span class="string">	tasklist |findstr mysqld</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2 如何杀死具体进程(只有在管理员cmd窗口下才能成功)</span></span><br><span class="line"><span class="string">	taskkill /F /PID PID号</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>环境变量配置</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">每次启动mysqld需要先切到对应的文件路径下才能操作太多繁琐</span></span><br><span class="line"><span class="string">将mysqld所在的文件路径添加到系统环境变量中</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>还是繁琐 需要起两个cmd窗口 不好</p>
+<p>将mysql服务端制作成系统服务(开机自启动)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">查看当前计算机的运行进程数</span></span><br><span class="line"><span class="string">	services.msc</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">将mysql制作成系统服务</span></span><br><span class="line"><span class="string">	mysqld --install</span></span><br><span class="line"><span class="string">移除mysql系统服务</span></span><br><span class="line"><span class="string">	mysqld --remove</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">mysqladmin -uroot -p原密码 password 新密码</span></span><br><span class="line"><span class="string">改命令直接在终端输入即可 无序进入客户端</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">mysqladmin -uroot -p123 password 123456</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="破解密码"><a href="#破解密码" class="headerlink" title="破解密码"></a>破解密码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">你可以将mysql获取用户名和密码校验的功能看成是一个装饰器</span></span><br><span class="line"><span class="string">装饰在了客户端请求访问的功能上</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">我们如果将该装饰器移除 那么mysql服务端就不会校验用户名和密码了</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 1 先关闭当前mysql服务端</span></span><br><span class="line"> 命令行的方式启动(让mysql跳过用户名密码验证功能)</span><br><span class="line"> mysqld --skip-grant-tables  </span><br><span class="line"><span class="comment"># 2 直接以无密码的方式连接</span></span><br><span class="line">	mysql -uroot -p   直接回车</span><br><span class="line"><span class="comment"># 3 修改当前用户的密码</span></span><br><span class="line">	update mysql.user <span class="built_in">set</span> password=password(<span class="number">123456</span>) where 		user=<span class="string">&#x27;root&#x27;</span> <span class="keyword">and</span> host=<span class="string">&#x27;localhost&#x27;</span>;</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">真正存储用户表的密码字段 存储的肯定是密文 </span></span><br><span class="line"><span class="string">只有用户自己知道明文是什么 其他人都不知道 这样更加的安全</span></span><br><span class="line"><span class="string">密码比对也只能比对密文</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 4 立刻将修改数据刷到硬盘</span></span><br><span class="line">	flush privileges;</span><br><span class="line"><span class="comment"># 5 关闭当前服务端 然后以正常校验授权表的形式启动</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="统一编码"><a href="#统一编码" class="headerlink" title="统一编码"></a>统一编码</h3><ul>
+<li><p>mysql默认的配置文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">my-default.ini </span></span><br><span class="line"><span class="string">ini结尾的一般都是配置文件</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">程序启动会先加载配置文件中的配置之后才真正的启动</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">[mysqld]  <span class="comment"># 一旦服务端启动立刻加载下面的配置</span></span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES </span><br><span class="line">[mysql]  <span class="comment"># 一旦客户端启动立刻加载下面的配置</span></span><br><span class="line">...</span><br><span class="line">[client]  <span class="comment"># 其他客户端</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要你自己新建一个my.ini的配置文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证配置是否真的是自动加载</span></span><br><span class="line">[mysql]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改配置文件后一定要重启服务才能生效</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 统一编码的配置 无需掌握 直接拷贝即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 偷懒 将管理员的用户名和密码也添加到配置文件中</span></span><br><span class="line">[mysqld]</span><br><span class="line">character-<span class="built_in">set</span>-server=utf8</span><br><span class="line">collation-server=utf8_general_ci</span><br><span class="line">[client]</span><br><span class="line">default-character-<span class="built_in">set</span>=utf8</span><br><span class="line">[mysql]</span><br><span class="line">user=<span class="string">&quot;root&quot;</span></span><br><span class="line">password=<span class="number">123456</span></span><br><span class="line">default-character-<span class="built_in">set</span>=utf8</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="基本sql语句"><a href="#基本sql语句" class="headerlink" title="基本sql语句"></a>基本sql语句</h3><p><strong>针对库的增删改查(文件夹)</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 增</span></span><br><span class="line">create database db1;</span><br><span class="line">create database db2 charset=<span class="string">&#x27;gbk&#x27;</span>;</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">show databases;  <span class="comment"># 查所有</span></span><br><span class="line">show create database db1;  <span class="comment"># 查单个</span></span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">alter database db2 charset=<span class="string">&#x27;utf8&#x27;</span>;</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">drop database db2;</span><br></pre></td></tr></table></figure>
+
+<p><strong>针对表的增删改查(文件)</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">在操作表(文件)的时候 需要指定所在的库(文件夹)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 查看当前所在的库的名字</span></span><br><span class="line">select database();</span><br><span class="line"><span class="comment"># 切换库</span></span><br><span class="line">use db1; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 增</span></span><br><span class="line">create table t1(<span class="built_in">id</span> <span class="built_in">int</span>,name char(<span class="number">4</span>));</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">show tables;  <span class="comment"># 查看当前库下面所有的表名</span></span><br><span class="line">show create table t1;</span><br><span class="line">describe t1;  <span class="comment"># 支持简写 desc t1;</span></span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">alter table t1 modify name char(<span class="number">16</span>);</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">drop table t1;</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">create table db2.t1(id int);  也可以用绝对路径的形式操作不同的库</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>针对数据的增删改查(一行行数据)</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">一定要先有库 有表 最后才能操作记录</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 增</span></span><br><span class="line">insert into t1 values(<span class="number">1</span>,<span class="string">&#x27;jason&#x27;</span>);</span><br><span class="line">insert into t1 values(<span class="number">1</span>,<span class="string">&#x27;jason&#x27;</span>),(<span class="number">2</span>,<span class="string">&#x27;egon&#x27;</span>),(<span class="number">3</span>,<span class="string">&#x27;tank&#x27;</span>);</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">select * <span class="keyword">from</span> t1;  <span class="comment"># 该命令当数据量特别大的时候不建议使用</span></span><br><span class="line">select name <span class="keyword">from</span> t1;</span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">update t1 <span class="built_in">set</span> name=<span class="string">&#x27;DSB&#x27;</span> where <span class="built_in">id</span> &gt; <span class="number">1</span>;</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">delete <span class="keyword">from</span> t1 where <span class="built_in">id</span> &gt; <span class="number">1</span>;</span><br><span class="line">delete <span class="keyword">from</span> t1 where name=<span class="string">&#x27;jason&#x27;</span>;</span><br><span class="line"><span class="comment"># 将表所有的数据清空</span></span><br><span class="line">delete <span class="keyword">from</span> t1;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语作文笔记分享</title>
+    <url>/2021/09/29/yingyu/</url>
+    <content><![CDATA[<p><strong>1. 词： “出彩的”书面用词（一句一亮点）+ 四大类文章和论证逻辑必用词</strong></p>
+<p> <strong>“重要的”“不可或缺”</strong></p>
+<p>  <strong>Indispensable  Integral</strong></p>
+<p>  <strong>Relevant  vital crucial critical</strong> </p>
+<p> <strong>根源于。。。原因</strong></p>
+<p>   <strong>…stem from…</strong></p>
+<p>  <strong>相矛盾的观点</strong> </p>
+<p> <strong>Conflicting  contradictory  contrary  opposite</strong> </p>
+<p><strong>一个明显的趋势</strong></p>
+<p> <strong>Apparent marked discernible</strong> </p>
+<p><strong>一个棘手的问题</strong></p>
+<p> <strong>a thorny problem</strong> </p>
+<p><strong>Nevertheless  nonetheless</strong> </p>
+<p> <strong>…so that…    thereby…</strong></p>
+<p><strong>2. 句：四大类文章常用连接句， 开篇句，结尾句+ 句式变换</strong></p>
+<p><strong>现如今，大量的注意力正在给予。。。</strong></p>
+<p><strong>A great deal of attention is being paid to …</strong></p>
+<p><strong>权衡地来看，其优点胜过缺点。</strong> </p>
+<p><strong>On balance, pros outweigh cons.</strong> </p>
+<p><strong>在这种现象的背后，什么是动因呢？</strong></p>
+<p><strong>What are motivations behind this?</strong></p>
+<p><strong>采取紧急的措施是当务之急。</strong> </p>
+<p><strong>To take urgent action is an imperative.</strong> </p>
+<p><strong>在我们的前方是光明的前景。</strong> </p>
+<p><strong>Ahead of us lie bright prospects.</strong> </p>
+<p><strong>Only if __________.  (倒装句）</strong></p>
+<p><strong>3. 段： 开头结尾段内基本模式； 四大类文章大致段落组成</strong></p>
+<p><strong>4. 篇：样文,批改网自评。</strong></p>
+<hr>
+<p><strong>例题：（19交大）</strong></p>
+<p><strong>Give your opinions on this perspective: Obstacles can be seen as opportunities.</strong> </p>
+<p> <strong>样文：</strong></p>
+<p><strong>Life is not all rosy. We will all undergo ups and downs; joys and sorrows. Major obstacles in our lives, such as physical handicaps, failures in our career and loss of beloved ones can be terrifying. But optimists tend to regard obstacles as opportunities. Indeed, lots of strong-willed persons can emerge from barriers in their lives wiser and tougher.</strong> </p>
+<p><strong>Let’s explore how we can transform obstacles into opportunities from different angles. To start with, physical handicap can be devastating to most people, nevertheless lot can be derived from it from the perspective of a fearless person. Helen Keller suffered from irreversible sight and hearing impairment at an early age, but she ended up as a fertile writer who savored the manifold blessings of lives more than we physically sound persons. Equally remarkably, athletes who attend the Paralympics can sometimes run and swim faster than an average person without physical disabilities.</strong></p>
+<p><strong>Incredible stories like theses are no more rarely seen among ordinary people. Student who failed in their academic study in primary schools would perform much better and achieve a lot eventually if they were prodded and inspired timely. With humility and perseverance, slow-witted students are more likely to be aware of their own weaknesses and be motivated to be successful.</strong> </p>
+<p><strong>Last but not the least, think about how much our country has been through in the past two decades.  Massive earthquakes and outbreaks of epidemics once seemed to be hurdles impossible to be clear. But these hurdles turned out to be valuable opportunities for us to witness how united and capable we can be in the relentless struggles against disasters.</strong> </p>
+<p><strong>Granted, some obstacles in our lives can be overwhelming. But keep this in mind: what didn’t kill us makes us stronger.  Only if obstacles are reckoned as an opportunities could we complete missions impossible in our lives.</strong>  </p>
+<h3 id="观点论证型"><a href="#观点论证型" class="headerlink" title="观点论证型"></a><strong>观点论证型</strong></h3><p><strong>view  perspective notion  belief  conviction</strong> </p>
+<p><strong>Mindset  philosophy</strong> </p>
+<p><strong>Conventional idea</strong> </p>
+<p><strong>Outlook on life</strong> </p>
+<p><strong>模式化观念；成见。 Stereotype</strong> </p>
+<p><strong>There is a stereotype that a prestigious university can always guarantee its students success.</strong></p>
+<p><strong>可和以下</strong>adj混搭****</p>
+<p><strong>credible  justifiable</strong> </p>
+<p><strong>Prevailing widely-held  conventional.</strong> </p>
+<p><strong>Well-founded  well-grounded</strong></p>
+<p><strong>Ill-grounded</strong> </p>
+<p><strong>We should reinforce</strong>／underline the view that…****</p>
+<p><strong>It goes beyond doubt /dispute that…</strong> </p>
+<p><strong>Few would dispute that…</strong> </p>
+<p><strong>There is no question about…</strong></p>
+<p><strong>The view prevails among sb that…</strong></p>
+<p><strong>It is widely accepted that…</strong></p>
+<p><strong>There is a growing consensus that…</strong></p>
+<p><strong>It is unanimously agreed that…</strong></p>
+<p><strong>It is established that…</strong></p>
+<p> <strong>可以被确认的是</strong> </p>
+<p><strong>强调重要性</strong></p>
+<p><strong>Value   cherish</strong></p>
+<p><strong>Emphasis should be laid on ….</strong></p>
+<p><strong>Importance should be attached to…</strong> </p>
+<p><strong>We should pay particular attention to…</strong> </p>
+<p><strong>We cannot do without…</strong></p>
+<p><strong>… is acknowledge as/reckoned as an invaluable asset to us.</strong></p>
+<p><strong>… is a vital component of our life.</strong> </p>
+<hr>
+<h3 id="正反对比"><a href="#正反对比" class="headerlink" title="正反对比"></a><strong>正反对比</strong></h3><p><strong>We have  views. / )ur views seem to be…</strong></p>
+<p><strong>Conflicting / opposite /contrary/contradictory/</strong> </p>
+<p><strong>Differing / incompatible/inconsistent/irreconcilable</strong> </p>
+<p><strong>Their view seems to be…</strong></p>
+<p><strong>Plausible  stereotyped  ill-informed(<strong>无知的）ill-grounded</strong> （没有根据的）</strong></p>
+<p><strong>when it comes to: on the subject of. /concerning/ regarding</strong></p>
+<p><strong>We are divided…</strong></p>
+<p><strong>Our views differ…</strong></p>
+<p><strong>My view diverges from this…</strong></p>
+<p><strong>The view that… is under (…) debate. /at issue</strong></p>
+<p>​        <strong>heated/ intense/ vigorous</strong> </p>
+<p><strong>… has aroused controversy/ generated(considerable/wide-ranging)discussion. .</strong></p>
+<p><strong>Whether… is debatable/arguable.</strong> </p>
+<p><strong>Let’s shift our attention to the opposite /converse view.</strong> </p>
+<p> <strong>样文：</strong></p>
+<p><strong>It is increasingly apparent that overseas purchasing via online agents are now gaining considerable popularity. The ongoing trend appeals to some people on grounds of its convenience and affordability, whereas others are skeptical of it.</strong> </p>
+<p><strong>There are some distinct advantages when it comes to the process. First, convenience. the consumers can simply log on the overseas purchasing websites and have instant access to a wide array of high-quality products by simply tapping on the screen of their smart phones. Consequently, the shopping experience becomes time-saving and efficient, not to mention the fact that some commodities are not even available to domestic consumers. Second, affordability. The website can attract many consumers simultaneously to the same designer product so that they can sell it at a wholesale price, which in some cases could be only a fraction of the original one.</strong> </p>
+<p><strong>By contrast, many consumers voice their concerns. They would argue that the online agents cannot guarantee the quality of commodity unless the consumers check it out in person. Another worry is that sensitive personal data, such as credit card number and mobile phone number, can be leaked during the process, which might bring about security concerns.</strong></p>
+<p><strong>From where I stand, pros outweigh cons. Granted, overseas purchasing is a sphere where further improvements are still highly anticipated. The trend is now becoming unstoppable and the sellers on the platform are making every effort to refine it. Nonetheless, both the sellers and buyers should deliberate on how to tackle the potential data leak generated by the new mode of buying.</strong> </p>
+<hr>
+<h3 id="社会趋势"><a href="#社会趋势" class="headerlink" title="社会趋势"></a><strong>社会趋势</strong></h3><p><strong>名词类</strong></p>
+<p><strong>… is a(n)__ trend. /We are witnessing…</strong> </p>
+<p><strong>consistent  steady</strong> </p>
+<p>   <strong>accelerating (growing)</strong></p>
+<p>   <strong>underlying</strong> </p>
+<p>   <strong>dominant  prevailing</strong>  </p>
+<p><strong>marked   apparent  discernible.</strong> </p>
+<p><strong>There is a growing tendency for sb to do sth.</strong> </p>
+<p><strong>… is an observable phenomenon.</strong> </p>
+<p><strong>The phenomenon emerges gradually/ occurs frequently.</strong> </p>
+<p><strong>动词，形容词，副词类</strong></p>
+<p><strong>It amazes/startles us to see that…</strong></p>
+<p><strong>The past decade has witnessed…</strong></p>
+<p><strong>The phenomenon prevails among… and still persist.</strong> </p>
+<p><strong>It is remarkable that…</strong></p>
+<p><strong>It is commonplace that…</strong></p>
+<p><strong>It is not uncommon that…</strong></p>
+<p><strong>Not surprisingly, ______.</strong> </p>
+<p><strong>Globally, ________.</strong> </p>
+<p><strong>固定句式类</strong> </p>
+<p><strong>A great deal of attention is being paid to…</strong></p>
+<p><strong>… has aroused /received/ captured/compelled +</strong></p>
+<p>​             <strong>public/media/urgent attention.</strong> </p>
+<p><strong>… should be brought under spotlight.</strong></p>
+<p><strong>样文：</strong></p>
+<p><strong>Education is an essential not an extra. It is an intrinsic right of each one of us rather than the privilege of a few. Then how could we ensure as many students as possible the easy and quick access to education? Attending online course should not be the last resort. Quite the contrary, online eduction is now an accelerating trend. It amazes us to see that students worldwide can attend Massive Open Online Courses (MOOC) and obtain the information they need.</strong> </p>
+<p> <strong>There are many aspects contributing to the popularity of online courses. First, diversity. There are a wide span of courses available online which range from literature to economics and from elementary courses to advanced ones. You can browse the relevant information on open courses websites effortlessly. The merit of online courses is not confined to this. Let’s take a look at the accessibility of such course. Lots of prestigious universities, including Harvard, offer MOOC to students worldwide and some of them are free of charge. To catch a glimpse of the charisma of elite scholars there, you don’t need to travel long distance, Instead, you could instantly watch informative lectures at home by a simple click of the mouse. Last, completing daily routines online is now prevailing. Think about online shopping and online dating. Students might not do without online courses lest they should fall behind the times. Limitation, benefits and drawbacks</strong></p>
+<p><strong>Undeniably, more and more attention is being paid to this new mode of learning. The role of online education in our lives is literally not negligible. It is anticipated that in the foreseeable future a growing proportion of students can benefit considerably from it.</strong> </p>
+<hr>
+<h3 id="社会问题"><a href="#社会问题" class="headerlink" title="社会问题"></a><strong>社会问题</strong></h3><p><strong>__ is</strong></p>
+<p><strong>a(n) adverse/disturbing/worrying trend</strong></p>
+<p><strong>It astonishes/ alarms us to see that…</strong></p>
+<p>  <strong>极为惊讶  焦虑</strong></p>
+<p><strong>a(n) pressing / urgent /immediate/growing problem (question/issue)</strong></p>
+<p><strong>long-term  long-standing</strong> </p>
+<p>​    <strong>acute  grave</strong>  </p>
+<p>​    <strong>knotty.  Thorny</strong> </p>
+<p><strong>Sth poses/creates/ a problem for us.</strong> </p>
+<p><strong>We are confronted by …</strong></p>
+<p><strong>We are beset by… / we are overwhelmed by…</strong></p>
+<p>​     <strong>为。。。所苦恼</strong></p>
+<p><strong>We have to handle/address /tackle/come to grips with /grapple with</strong> </p>
+<p>​                          <strong>努力设法解决</strong></p>
+<p><strong>It’s hard to cure/clear up/overcome/resolve (the problem).</strong></p>
+<p><strong>We should attempt to alleviate /ease it.</strong> </p>
+<p><strong>We cannot evade/circumvent it.</strong> </p>
+<p>​        <strong>逃避      规避</strong> </p>
+<p><strong>究责</strong></p>
+<p><strong>Who is to blame for it?</strong></p>
+<p><strong>We have no one else to blame for this except for ourselves.</strong></p>
+<p><strong>The government should be held accountable for …</strong></p>
+<p><strong>The responsibility rests with …</strong></p>
+<p><strong>解决问题的手段</strong></p>
+<p><strong>We have to take initiative. /Much can be done.</strong> </p>
+<p><strong>We have to take … action. We have to take steps /measures to do</strong> </p>
+<p><strong>…take precaution at/against.</strong> </p>
+<p><strong>…take preventative measures.</strong> </p>
+<p>​     *<strong>appropriate immediate swift   urgent drastic  decisive  vigorous*</strong> </p>
+<p><strong>We have to make …efforts.</strong> </p>
+<p>​    <strong>Conscious  collective  concerted</strong> </p>
+<p><strong>It is preferable /desirable /fitting that sth be done.</strong> </p>
+<p><strong>We should ensure that…</strong></p>
+<p><strong>We should never neglect to do…</strong></p>
+<p><strong>We have no alternative but to do…</strong></p>
+<p><strong>… is a promising start.</strong> </p>
+<p><strong>The initial step is to do…</strong></p>
+<p><strong>It is a big step doing sth.</strong></p>
+<p><strong>Doing sth is an imperative.</strong> </p>
+<p><strong>… is the first/last resort.</strong> </p>
+<p><strong>例题：<em>Write an essay on what human beings have learned about the quick spread of a virus and what should be done to deal with it.</em></strong> </p>
+<p><strong>样文：</strong></p>
+<p><strong>Urgent action is now being taken around the globe to combat the novel coronavirus at present. The epidemic is still raging in spite of it being effectively contained in China. Throughout human history, how to fight against a virus has invariably been a thorny problem.</strong> </p>
+<p><strong>What might account for the swift spread of the virus ? There are many contributing factors. Before anything else, human beings have had very limited knowledge in this sphere. It is no surprising that mankind had long been afflicted by each breakout. Secondly, the increase in the world population has been exponential and the whole world has been much more closely connected than ever before. People travel by air and by train very frequently and effortlessly due to considerable improvement in public transit home and broad. And the increased mobility makes it easier and faster for the virus to be spread from person to person and from country to country.</strong> </p>
+<p><strong>Much can be done to tackle the spread of the virus. To quarantine residents in the virus-hit areas is a promising start. Decreased mobility had been proven to be the simplest and most effective measure to contain the spread in human history. Priority should also be given to how the medical resources can be mobilized in the rescue mission. In China, hundreds of thousands of medics have been dispatched to the infected areas and 1000-bed hospitals have been build within ten days to treat patients. More factories are being called on to manufacture masks and the daily capacity now increases to over 50 millions masks a day. Another concern is that people should be made aware of the potential exposure to viruses again if they still recklessly eat the meat of some wild animals. Last but not the least, more medical experts should dedicate themselves to the development of vaccines against viruses. The process can be time-consuming and strenuous. But we are convinced that the dawn of victory will appear eventually provided that we never relent in our efforts.</strong></p>
+<hr>
+<p><strong>附：考研原刊例句摘选 （注意位置化；功能化）</strong></p>
+<p><em><strong>Only in this way can we be sure that…</strong></em></p>
+<p><em><strong>For centuries, / Globally,  /in the years to come /… is a daily routine.</strong></em> </p>
+<p><em><strong>People have begun to become aware that…</strong></em></p>
+<p><em><strong>It is probably true to say that…</strong></em></p>
+<p><em><strong>underlying the phenomenon is the notion that…</strong></em></p>
+<p><em><strong>It doesn’t come as a surprise to realize that…</strong></em></p>
+<p><em><strong>The question naturally arises: why …</strong></em></p>
+<p><em><strong>Can we anticipate a day when…? It’s probably coming (if…)</strong></em></p>
+<p><em><strong>When considering the merits/drawbacks, __ is of prime importance.</strong></em> </p>
+<p><em><strong>____ add to our worries.</strong></em> </p>
+<p><em><strong>The question of … is much argued by…</strong></em></p>
+<p><em><strong>If we are to _____, it seems imperative not only that sth should be done but also that sth should be done.</strong></em> </p>
+<p><em><strong>The present situation is far from satisfactory though some progress has been made.</strong></em></p>
+<p><em><strong>… is due to the fact that…</strong></em></p>
+<p><em><strong>We desperately need more people who believe that…</strong></em></p>
+<p><em><strong>It is all well to blame …, but _______.</strong></em> </p>
+<p><em><strong>One way of overcoming this difficulty is to …</strong></em></p>
+<p><em><strong>…will continue (persist) as long as…</strong></em></p>
+<p><em><strong>On the whole such a conclusion can be drawn with a certain degree of confidence.</strong></em> </p>
+<p><em><strong>Is … indispensable without which ________?</strong></em></p>
+<p><em><strong>it is also of concern that…</strong></em></p>
+<p><em><strong>If you …, you are not alone</strong></em> </p>
+<p><em><strong>As anyone who has done…knows, ______.</strong></em> </p>
+<p><em><strong>Any small improvement in the realm will make a big impact on….</strong></em></p>
+<p><em><strong>When it comes to___, thinking about both the short-term fixes and long-term approaches.</strong></em> </p>
+<p><em><strong>We can surely harvest…</strong></em></p>
+<hr>
+<p><strong>本文结合自己的阅读与老师笔记整理，全是满满的干货哦，希望对大家有所帮助。</strong></p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>crazy english</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c语言指针</title>
+    <url>/2021/09/29/zhizhen/</url>
+    <content><![CDATA[<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a><em><strong><u>指针</u></strong></em></h1><h2 id="指针的重要性"><a href="#指针的重要性" class="headerlink" title="指针的重要性"></a><strong>指针的重要性</strong></h2><p><strong>表示一些复杂的数据结构  快速的传递数据，减少了内存的耗用  使函数返回 1个以上的值</strong> </p>
+<p><strong>能直接访问硬件 能够方便的处理字符串 是理解面向对象语言中引用的基础</strong> </p>
+<p><strong>总结:指针是c语言的灵魂</strong> </p>
+<hr>
+<h2 id="指针的定义"><a href="#指针的定义" class="headerlink" title="指针的定义"></a><strong>指针的定义</strong></h2><p><strong>地址</strong> </p>
+<p><strong>内存单元的编号 从零开始的非负整数 范围 :4G [ O- 4G- l ]</strong></p>
+<p> <strong>指针</strong> </p>
+<p><strong>指针就是地址， 地址就是指针</strong> </p>
+<p><strong>指针变量就是存放内存单元编号的变量，或者说指针变量就是存放地址的变量 指针和指针变量是两个不同的概念</strong> </p>
+<p><strong>但是要注意: 通常我们叙述时会把指针变量简称为指针，实际它们含义并不 指针的本质就是一个操作受限的非负整数</strong> </p>
+<hr>
+<h2 id="指针的分类"><a href="#指针的分类" class="headerlink" title="指针的分类"></a><strong>指针的分类</strong></h2><ol>
+<li><strong>基本类型指针</strong> </li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> * p; <span class="comment">//p是变量的名字， int *表示 p变量存放的是int类型变量的地址//int * p; 不表示定义了一个名字叫做*p的变量** </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> j;</span><br><span class="line">p = &amp;i; </span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li><p><strong>p保存了i的地址，因此p指向i</strong></p>
+</li>
+<li><p><strong>p不是i， i也不是p ，更准确的说: 修改p 的值不影响i 的值，修改 i的值也不会影响p 的值 如果一个指针变量指向 个普通变量，则   指针变量就完全等同于普通变量</strong></p>
+<p><strong>例子：如果 p是个指针变量，并且 p存放了普通变量 i的地址 。则p 指向了普通变量i</strong></p>
+<p> *<strong>p 就完全等同于 i</strong> </p>
+<p> <strong>或者说 在所有出现*p的地方都可以替换成i</strong></p>
+<p> <strong>在所有出现i的地方都可以替换成句<em>p</em></strong></p>
+<p>*<em>最准确的解释是:<em>p表示的是以p 的内容为地址的变量</em></em></p>
+<p><strong>附注:</strong> </p>
+<p>*<strong>的含义 1.乘法</strong> </p>
+<ol start="2">
+<li><p>*<em>定义指针变量 int * p;  //定义了一个名字叫p的变量， int <em>表示p 只能存放int变量的地址</em></em> </p>
+</li>
+<li><p><strong>指针运算符</strong> </p>
+<p><strong>该运算符放在已经定义好的指针变量的前面 如果p 是一个已经定义好的指针变量 则*p表示以p 的内容为地址的变量</strong></p>
+<p> <strong>如何通过被调函数修改主调函数普通变量的值</strong></p>
+<p> <strong>1.实参必须为该普通变量的地址</strong> </p>
+<ol start="2">
+<li><p><strong>形参必须为指针变量</strong></p>
+</li>
+<li><p><strong>在被调函数中通过</strong></p>
+<p> *<strong>形参名.. .</strong>  </p>
+<p><strong>的方式就可以修改主调函数相关变量的值</strong></p>
+</li>
+</ol>
+</li>
+<li><p><strong>指针和数组</strong> </p>
+<p><strong>指针和一维数组</strong> </p>
+<p><strong>一维数组名</strong> </p>
+<p><strong>一维数组名 是个指针常量</strong> </p>
+<p><strong>它存放的是一维数组第一个元素的地址</strong> </p>
+<p>下标和指针的关系如果p是个指针变量,则p[i]永远等价于* (p+i)</p>
+<p><strong>确定一个一维数组需要几个参数【如一个函数要处理一个一维数组，则要接收该数组的哪些信息】</strong></p>
+<p> <strong>需要两个参数: 数组第一个元素的地址 数组的长度</strong></p>
+<p> <strong>指针变量的运算</strong></p>
+<p> <strong>指针变量不能相加  不能相乘   也不能相除</strong> </p>
+<p><strong>如果两个指针变量指向的是同一块连续空间中的不同存储单元， 则这两个指针变量才可以相减</strong></p>
+<h2 id="指针与数组的对比"><a href="#指针与数组的对比" class="headerlink" title="指针与数组的对比"></a>指针与数组的对比</h2></li>
+</ol>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>指针</strong></th>
+<th align="center"><strong>数组</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>保存数据的地址，任何存入指针变量p的数据都会被当作地址来处理。p本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
+<td align="center"><strong>保存数据，数组名a代表的是数组首元素的首地址而不是数组的首地址。&amp;a才是整个数组的首地址。 a本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>间接访问数据，首先取得指针变量p的内容，把它作为地址，然后从这个地址提取数据或向这个地址写入数据。指针可以以指针的形式访问*(p+i);也可以以下标的形式访问p[i]。但其本质都是先取p的内容然后加上i *sizeof(类型)个byte作为数据的真正地址。</strong></td>
+<td align="center"><strong>直接访问数据， 数组名a是整个数组的名字，数组内每个元素 并没有名字。只能通过“具名+匿名” 的方式来访问其某个元素，不能把数组当一个整体 来进行读写操作。数组可以以指针的形式访问*(a+i);也可以以下标的形式访 问a[i].但其本质都是a所代表的数组首元素的首地址加上i*sizeof(类型)个byte作为数据的真正地址。</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>通常用于动态数据结构</strong></td>
+<td align="center"><strong>通常用于存储固定数目且数据类型相同的元</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>相关的函数为malloc和free.</strong></td>
+<td align="center"><strong>隐式分配和删除</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>通常指向匿名数据(当然也可指向具名数据）</strong></td>
+<td align="center"><strong>自身即为数组名</strong></td>
+</tr>
+</tbody></table>
+<h2 id="指针与二维数组"><a href="#指针与二维数组" class="headerlink" title="指针与二维数组"></a><strong>指针与二维数组</strong></h2><h3 id="指针与函数"><a href="#指针与函数" class="headerlink" title="指针与函数"></a><strong>指针与函数</strong></h3><h3 id="指针与结构体"><a href="#指针与结构体" class="headerlink" title="指针与结构体"></a><strong>指针与结构体</strong></h3><h3 id="多级指针"><a href="#多级指针" class="headerlink" title="多级指针"></a><strong>多级指针</strong></h3><p><strong>例：</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i =<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p=i;   <span class="comment">//p只能存放int类型变量的地址</span></span><br><span class="line"><span class="keyword">int</span> ** q=&amp;p;  / /q <span class="keyword">int</span> **类型， 所谓<span class="keyword">int</span> **类型就是指q只能存放<span class="keyword">int</span> *类型变的地址</span><br><span class="line"><span class="keyword">int</span> ***r= &amp;q; <span class="comment">//r int ***类型，所谓 int ***类型就是指r只能存放int **类型变量的地址</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="动态分配内存（重难点）"><a href="#动态分配内存（重难点）" class="headerlink" title="动态分配内存（重难点）"></a><strong>动态分配内存（重难点）</strong></h4><p><strong>传统数组的缺点:</strong> </p>
+<ol>
+<li><p><strong>数组长度必须事先制定，且只能是常整数，不能是变量</strong></p>
+<p><strong>例子:</strong> </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]; <span class="comment">//OK</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">int</span> len = <span class="number">5</span>; <span class="keyword">int</span> a[len]; <span class="comment">//error </span></span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li><p><strong>传统形式定义的数组，该数组的内存程序员无法手动释放 。在一个函数运行期间，系统为该函数中数组所分配的空间 会一直存在， 直到该函 数运行完毕肘，数组的 间才会被 系统释放</strong></p>
+</li>
+<li><p><strong>数组的长度一旦定义，其长度就不能再更改</strong> </p>
+<p> <strong>数组的长度不能在函数运行的过程中动态的扩充或缩小</strong></p>
+</li>
+<li><p><strong>A函数定义的数组，在 A函数运行期间可以被其它函数使用， 但A函数运行完毕之后， A函数中的数组将无法在被其他 函数使用</strong></p>
+<p><strong>传统方式定义的数组不能跨函数使用</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="为什么要动态分配内存"><a href="#为什么要动态分配内存" class="headerlink" title="为什么要动态分配内存"></a><strong>为什么要动态分配内存</strong></h4><p><strong>动态数组很好的解决了传统数组的这4个缺陷</strong> </p>
+<p><strong>传统数组也叫静态数组</strong></p>
+<hr>
+<p><strong>😩努力在学习中，后续更新哦~</strong></p>
+]]></content>
+      <categories>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>指针</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>词汇积累</title>
     <url>/2021/11/22/phrases/</url>
     <content><![CDATA[<h1 id="短语"><a href="#短语" class="headerlink" title="短语"></a>短语</h1><p>求职者：job seekers</p>
@@ -490,491 +975,6 @@
 </thead>
 </table>
 <hr>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>crazy english</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>家庭收支记账项目</title>
-    <url>/2021/10/09/project01/</url>
-    <content><![CDATA[<h1 id="家庭收支记账项目"><a href="#家庭收支记账项目" class="headerlink" title="家庭收支记账项目"></a><strong>家庭收支记账项目</strong></h1><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h2><h3 id="1-主界面"><a href="#1-主界面" class="headerlink" title="1.主界面"></a><strong>1.主界面</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">FamilyAccount</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;-------------家庭收支记账软件------------\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                1 收支明细&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                2 登记收入&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                3 登记支出&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                4退    出\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-加入选择结构的流程控制语句"><a href="#2-加入选择结构的流程控制语句" class="headerlink" title="2.加入选择结构的流程控制语句"></a><strong>2.加入选择结构的流程控制语句</strong></h2><h3 id="1-接受用户的选择"><a href="#1-接受用户的选择" class="headerlink" title="(1)接受用户的选择"></a><strong>(1)接受用户的选择</strong></h3><p><strong>char selection = Utility.readMenuSelection();</strong></p>
-<h3 id="2-根据用户的选择，执行不同的语句"><a href="#2-根据用户的选择，执行不同的语句" class="headerlink" title="(2)根据用户的选择，执行不同的语句"></a><strong>(2)根据用户的选择，执行不同的语句</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">char</span> selection = Utility.readMenuSelection();</span><br><span class="line">			<span class="keyword">switch</span>(selection)&#123;</span><br><span class="line">				</span><br><span class="line">			    <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">					<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">				System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">				System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">                <span class="comment">//登记支出</span></span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line"></span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				<span class="comment">//待补充</span></span><br><span class="line">System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">                <span class="comment">//退出</span></span><br><span class="line">					System.out.print(<span class="string">&quot;确认是否退出(Y/N):&quot;</span>);</span><br><span class="line">                    <span class="comment">//待补充</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-功能能够循环使用"><a href="#3-功能能够循环使用" class="headerlink" title="3.功能能够循环使用"></a><strong>3.功能能够循环使用</strong></h2><h3 id="（1）加入循环"><a href="#（1）加入循环" class="headerlink" title="（1）加入循环"></a><strong>（1）加入循环</strong></h3><h2 id="登记收入"><a href="#登记收入" class="headerlink" title="登记收入"></a><strong>登记收入</strong></h2><h3 id="（1）从键盘输入信息"><a href="#（1）从键盘输入信息" class="headerlink" title="（1）从键盘输入信息"></a><strong>（1）从键盘输入信息</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line"><span class="keyword">int</span> addMoney = Utility.readNumber();</span><br><span class="line">System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">String addInfo = Utility.readString();</span><br><span class="line"><span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="调整余额、串接信息"><a href="#调整余额、串接信息" class="headerlink" title="调整余额、串接信息"></a><strong>调整余额、串接信息</strong></h4><p><strong>基本金的记录可以使用 int 类型的局部变量来实现：</strong></p>
-<p> <strong>int balance = 10000;</strong></p>
-<p> <strong>收支明细记录可以使用 Sting 类型的变量来实现，其初始值为明细表的表头。例如：String details = “收支\t 账户金额\t 收支金额\t 说 明\n”;</strong> </p>
-<p><strong>在登记收支时，将收支金额与 balance 相加或相减，收支记录直接串接到 details 后面即可。</strong> </p>
-<p><strong>说明：因为余额和明细信息是多个功能，以及在程序退出之前多次登记是共享的，因此必须 把这两个变量声明在循环之上</strong></p>
-<h2 id="2-登记支出"><a href="#2-登记支出" class="headerlink" title="2.登记支出"></a><strong>2.登记支出</strong></h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> minusMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				String minusInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(balance &gt;=minusMoney)&#123;</span><br><span class="line">					balance -= minusMoney;</span><br><span class="line"></span><br><span class="line">					details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> +minusMoney + <span class="string">&quot;\t\t&quot;</span> + minusInfo +<span class="string">&quot;\n&quot;</span>); </span><br><span class="line">				&#125;<span class="keyword">else</span> </span><br><span class="line">				&#123;</span><br><span class="line">					System.out.print(<span class="string">&quot;支付超出账户额度，支付失败&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-收支明细"><a href="#3-收支明细" class="headerlink" title="3.收支明细"></a><strong>3.收支明细</strong></h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">				<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">			System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">			System.out.println(details);</span><br><span class="line">			System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="总结，完整代码为："><a href="#总结，完整代码为：" class="headerlink" title="总结，完整代码为："></a><strong>总结，完整代码为：</strong></h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">FamilyAccount</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	   <span class="keyword">boolean</span> isFlag = <span class="keyword">true</span>;</span><br><span class="line">	   <span class="keyword">int</span> balance = <span class="number">10000</span>;</span><br><span class="line"></span><br><span class="line">	   String details = <span class="string">&quot;收支\t账户金额\t收支金额\t说  明\n&quot;</span>;</span><br><span class="line">	   <span class="keyword">while</span> (isFlag)</span><br><span class="line">	   &#123;</span><br><span class="line">		   System.out.println(<span class="string">&quot;-------------家庭收支记账软件------------\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                1 收支明细&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                2 登记收入&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                3 登记支出&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                4退    出\n&quot;</span>);</span><br><span class="line">		   System.out.println(<span class="string">&quot;                请选择(1-4):&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">char</span> selection = Utility.readMenuSelection();</span><br><span class="line">			<span class="keyword">switch</span>(selection)&#123;</span><br><span class="line">				</span><br><span class="line">			    <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">					<span class="comment">//System.out.println(&quot;1 收支明细&quot;);</span></span><br><span class="line">				System.out.println(<span class="string">&quot;----------------当前收支明细记录----------------&quot;</span>);</span><br><span class="line">				System.out.println(details);</span><br><span class="line">				System.out.println(<span class="string">&quot;------------------------------------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> addMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次收入说明：&quot;</span>);</span><br><span class="line">				String addInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				balance +=  addMoney;</span><br><span class="line"></span><br><span class="line">				details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> + addMoney + <span class="string">&quot;\t\t&quot;</span> + addInfo +<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				System.out.println(<span class="string">&quot;-------------------登记完成------------------&quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出金额：&quot;</span>);</span><br><span class="line">				<span class="keyword">int</span> minusMoney = Utility.readNumber();</span><br><span class="line">				System.out.print(<span class="string">&quot;本次支出说明：&quot;</span>);</span><br><span class="line">				String minusInfo = Utility.readString();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(balance &gt;=minusMoney)&#123;</span><br><span class="line">					balance -= minusMoney;</span><br><span class="line"></span><br><span class="line">					details +=(<span class="string">&quot;收入\t&quot;</span>+balance +<span class="string">&quot;\t\t&quot;</span> +minusMoney + <span class="string">&quot;\t\t&quot;</span> + minusInfo +<span class="string">&quot;\n&quot;</span>); </span><br><span class="line">				&#125;<span class="keyword">else</span> </span><br><span class="line">				&#123;</span><br><span class="line">					System.out.print(<span class="string">&quot;支付超出账户额度，支付失败&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">					System.out.print(<span class="string">&quot;确认是否退出(Y/N):&quot;</span>);</span><br><span class="line">					<span class="keyword">char</span> isExit = Utility.readConfirmSelection();</span><br><span class="line">					<span class="keyword">if</span> (isExit ==<span class="string">&#x27;Y&#x27;</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						isFlag =<span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">	   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二叉树顺序结构存储算法</title>
-    <url>/2022/09/21/project02/</url>
-    <content><![CDATA[<p>代码实现：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 8</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//初始化二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EmptyTree</span><span class="params">(<span class="keyword">int</span> Tree[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;MAX_SIZE;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        Tree[i]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给i节点赋值操作</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setNode</span><span class="params">(<span class="keyword">int</span> Tree[],<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Tree == <span class="literal">NULL</span>) &#123;<span class="built_in">printf</span>(<span class="string">&quot;二叉树为空&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=MAX_SIZE) &#123;<span class="built_in">printf</span>(<span class="string">&quot;超出数组范围&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    Tree[i]=x;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给i节点的左孩子设置值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setLeftChild</span><span class="params">(<span class="keyword">int</span> Tree[],<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Tree == <span class="literal">NULL</span>) &#123;<span class="built_in">printf</span>(<span class="string">&quot;二叉树为空&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">if</span>(i*<span class="number">2</span> &gt;= MAX_SIZE) &#123;<span class="built_in">printf</span>(<span class="string">&quot;超出数组范围&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    Tree[i*<span class="number">2</span>]=x;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给i节点的右孩子设置值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setRightChild</span><span class="params">(<span class="keyword">int</span> Tree[],<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Tree == <span class="literal">NULL</span>) &#123;<span class="built_in">printf</span>(<span class="string">&quot;二叉树为空&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">if</span>(i*<span class="number">2</span>+<span class="number">1</span> &gt;= MAX_SIZE) &#123;<span class="built_in">printf</span>(<span class="string">&quot;超出数组范围&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    Tree[i*<span class="number">2</span>+<span class="number">1</span>]=x;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printTree</span><span class="params">(<span class="keyword">int</span> Tree[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_SIZE;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,Tree[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> Tree[MAX_SIZE];</span><br><span class="line">    EmptyTree(Tree);</span><br><span class="line"> </span><br><span class="line">    setNode(Tree,<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">    setLeftChild(Tree,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    setRightChild(Tree,<span class="number">1</span>,<span class="number">3</span>);</span><br><span class="line"> </span><br><span class="line">    setRightChild(Tree,<span class="number">2</span>,<span class="number">4</span>);</span><br><span class="line"> </span><br><span class="line">    setLeftChild(Tree,<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"> </span><br><span class="line">    printTree(Tree);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>c语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>初识sql语句</title>
-    <url>/2022/09/22/sql/</url>
-    <content><![CDATA[<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h3 id="存储数据的演变过程"><a href="#存储数据的演变过程" class="headerlink" title="存储数据的演变过程"></a>存储数据的演变过程</h3><ul>
-<li><p>随意的存到一个文件中、数据格式也是千差万别的完全取决于我们自己</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"># 小李</span></span><br><span class="line"><span class="string">jason|123|NB</span></span><br><span class="line"><span class="string"># 小王</span></span><br><span class="line"><span class="string">egon-123-DBJ</span></span><br><span class="line"><span class="string"># 小红</span></span><br><span class="line"><span class="string">tank~123~hecha</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>软件开发目录规范</p>
-<p>限制了存储数据的具体位置</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">bin</span></span><br><span class="line"><span class="string">conf</span></span><br><span class="line"><span class="string">core</span></span><br><span class="line"><span class="string">db</span></span><br><span class="line"><span class="string">lib</span></span><br><span class="line"><span class="string">readme</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>假设上述是一个单机游戏</p>
-<p>那么每个人的游戏记录只会在自己的计算机上面保存</p>
-<p>注册登录的账号也只能在自己的计算机上有效</p>
-</li>
-<li><p>如何将单机变成连网</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">将数据库保存部分全部统一起来</span></span><br><span class="line"><span class="string">所有人操作数据都来一个地方操作</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="数据库的本质"><a href="#数据库的本质" class="headerlink" title="数据库的本质"></a>数据库的本质</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">本质其实就是一款基于网络通信的应用程序</span></span><br><span class="line"><span class="string">那其实每个人都可以开发一款数据库软件 因为它仅仅就是一个基于网络通信的应用程序</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">也就意味着数据库软件其实有很多很多</span></span><br><span class="line"><span class="string">	关系型数据库</span></span><br><span class="line"><span class="string">		MySQL、oracle、db2、access、sql server</span></span><br><span class="line"><span class="string">	非关系型数据库</span></span><br><span class="line"><span class="string">		redis、mongodb、memcache</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 关系型</span></span><br><span class="line">	<span class="number">1</span> 数据之间彼此有关系或者约束</span><br><span class="line">    	男生表和前女友表</span><br><span class="line">    <span class="number">2</span> 存储数据的表现形式通常是以表格存储	</span><br><span class="line">    	name     password		hobby</span><br><span class="line">        jason	  <span class="number">123</span>			学习</span><br><span class="line">        egon	  <span class="number">123</span>			女教练</span><br><span class="line">        tank	  <span class="number">123</span>			吃生蚝</span><br><span class="line">        每个字段还会有存储类型的限制</span><br><span class="line">        比如姓名只能存字符串...</span><br><span class="line"><span class="comment"># 非关系型</span></span><br><span class="line">	存储数据通常都是以k,v键值对的形式</span><br></pre></td></tr></table></figure>
-
-<h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">任何基于网络通信的应用程序底层用的都是socket</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-服务端</span></span><br><span class="line"><span class="string">	-基于socket通信</span></span><br><span class="line"><span class="string">	-收发消息</span></span><br><span class="line"><span class="string">	-SQL语句</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-客户端</span></span><br><span class="line"><span class="string">	-基于socket通信</span></span><br><span class="line"><span class="string">	-收发消息</span></span><br><span class="line"><span class="string">	-SQL语句</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">MySQL不单单支持MySQL自己的客户端app还支持其他编程语言来充当客户端操作</span><br><span class="line">	如何解决语言沟通的障碍？</span><br><span class="line">    	<span class="comment"># 1 让服务端兼容所有的语言(一个人精通多国语言)</span></span><br><span class="line">        <span class="comment"># 2 采用统一的语言(SQL语句)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="重要概念介绍"><a href="#重要概念介绍" class="headerlink" title="重要概念介绍"></a>重要概念介绍</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">库 			》》》			 文件夹</span></span><br><span class="line"><span class="string">表			》》》			 文件</span></span><br><span class="line"><span class="string">记录		   》》》			文件内一行行的数据</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    	name     password		hobby</span></span><br><span class="line"><span class="string">        jason	  123			学习</span></span><br><span class="line"><span class="string">        egon	  123			女教练</span></span><br><span class="line"><span class="string">        tank	  123			吃生蚝</span></span><br><span class="line"><span class="string">表头				表格的第一行字段</span></span><br><span class="line"><span class="string">字段				name、password、hobby</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="MySQL的安装"><a href="#MySQL的安装" class="headerlink" title="MySQL的安装"></a>MySQL的安装</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">在IT界 一般都不会轻易的使用最新版本的软件，因为新版本可能会出现各种问题</span></span><br><span class="line"><span class="string">(你原本项目跑的好好的 非要画蛇添足更新版本 然后项目奔溃)</span></span><br><span class="line"><span class="string">小段子:</span></span><br><span class="line"><span class="string">	更新完没事 那么你还是一个普通员工</span></span><br><span class="line"><span class="string">	更新完出事 那么你就是一名&quot;烈士&quot;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># MySQL有很多版本(5.6、5.7、8.0) 目前企业里面用的比较多的还是5.6左右</span></span><br></pre></td></tr></table></figure>
-
-<p>参考网站:<a href="https://www.mysql.com/">https://www.mysql.com/</a></p>
-<p>下载5.6版本即可</p>
-<h4 id="MySQL服务端与客户端"><a href="#MySQL服务端与客户端" class="headerlink" title="MySQL服务端与客户端"></a>MySQL服务端与客户端</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">服务端</span></span><br><span class="line"><span class="string">mysqld.exe</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">客户端</span></span><br><span class="line"><span class="string">mysql.exe</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注意</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">在前期配置MySQL的时候 cmd终端尽量以管理员的身份运行</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">windows+r 输入cmd  进入的是普通用户终端 有一些命令是无法执行的</span></span><br><span class="line"><span class="string">搜索cmd右键 以管理员身份运行</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><ul>
-<li><p>先切换到mysqld所在的bin目录下，然后输入mysqld即可</p>
-</li>
-<li><p>保留原来的cmd窗口重新打开一个</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">常见软件的默认端口号</span></span><br><span class="line"><span class="string">	MySQL  3306</span></span><br><span class="line"><span class="string">	redis  6379</span></span><br><span class="line"><span class="string">	mongodb 27017</span></span><br><span class="line"><span class="string">	django  8000</span></span><br><span class="line"><span class="string">	flask   5000</span></span><br><span class="line"><span class="string">	...</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">MySQL第一次以管理员身份进入是没有密码的 直接回车即可</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">客户端连接服务端完整命令</span></span><br><span class="line"><span class="string">	mysql -h 127.0.0.1 -P 3306 -uroot -p</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="sql语句初识"><a href="#sql语句初识" class="headerlink" title="sql语句初识"></a>sql语句初识</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">1 MySQL中的sql语句是以分号作为结束的标志</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2 基本命令</span></span><br><span class="line"><span class="string">	show databases;  查看所有的库名</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3 连接服务端的命令可以简写</span></span><br><span class="line"><span class="string">	mysql -uroot -p</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">4 当你输入的命令不对 又不想让服务端执行并返回报错信息 可以用\c取消</span></span><br><span class="line"><span class="string">	错误命令  \c</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5 客户端退出  退出命令加不加分号都可以执行</span></span><br><span class="line"><span class="string">	quit</span></span><br><span class="line"><span class="string">	exit</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">6 当你在连接服务端的时候 发现只输入mysql也能连接</span></span><br><span class="line"><span class="string">	但是你不是管理员身份 而只是一个游客模式</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="环境变量配置及系统服务制作"><a href="#环境变量配置及系统服务制作" class="headerlink" title="环境变量配置及系统服务制作"></a>环境变量配置及系统服务制作</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">1 如何查看当前具体进程</span></span><br><span class="line"><span class="string">	tasklist</span></span><br><span class="line"><span class="string">	tasklist |findstr mysqld</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2 如何杀死具体进程(只有在管理员cmd窗口下才能成功)</span></span><br><span class="line"><span class="string">	taskkill /F /PID PID号</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>环境变量配置</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">每次启动mysqld需要先切到对应的文件路径下才能操作太多繁琐</span></span><br><span class="line"><span class="string">将mysqld所在的文件路径添加到系统环境变量中</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>还是繁琐 需要起两个cmd窗口 不好</p>
-<p>将mysql服务端制作成系统服务(开机自启动)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">查看当前计算机的运行进程数</span></span><br><span class="line"><span class="string">	services.msc</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">将mysql制作成系统服务</span></span><br><span class="line"><span class="string">	mysqld --install</span></span><br><span class="line"><span class="string">移除mysql系统服务</span></span><br><span class="line"><span class="string">	mysqld --remove</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">mysqladmin -uroot -p原密码 password 新密码</span></span><br><span class="line"><span class="string">改命令直接在终端输入即可 无序进入客户端</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">mysqladmin -uroot -p123 password 123456</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="破解密码"><a href="#破解密码" class="headerlink" title="破解密码"></a>破解密码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">你可以将mysql获取用户名和密码校验的功能看成是一个装饰器</span></span><br><span class="line"><span class="string">装饰在了客户端请求访问的功能上</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">我们如果将该装饰器移除 那么mysql服务端就不会校验用户名和密码了</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 1 先关闭当前mysql服务端</span></span><br><span class="line"> 命令行的方式启动(让mysql跳过用户名密码验证功能)</span><br><span class="line"> mysqld --skip-grant-tables  </span><br><span class="line"><span class="comment"># 2 直接以无密码的方式连接</span></span><br><span class="line">	mysql -uroot -p   直接回车</span><br><span class="line"><span class="comment"># 3 修改当前用户的密码</span></span><br><span class="line">	update mysql.user <span class="built_in">set</span> password=password(<span class="number">123456</span>) where 		user=<span class="string">&#x27;root&#x27;</span> <span class="keyword">and</span> host=<span class="string">&#x27;localhost&#x27;</span>;</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">真正存储用户表的密码字段 存储的肯定是密文 </span></span><br><span class="line"><span class="string">只有用户自己知道明文是什么 其他人都不知道 这样更加的安全</span></span><br><span class="line"><span class="string">密码比对也只能比对密文</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 4 立刻将修改数据刷到硬盘</span></span><br><span class="line">	flush privileges;</span><br><span class="line"><span class="comment"># 5 关闭当前服务端 然后以正常校验授权表的形式启动</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="统一编码"><a href="#统一编码" class="headerlink" title="统一编码"></a>统一编码</h3><ul>
-<li><p>mysql默认的配置文件</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">my-default.ini </span></span><br><span class="line"><span class="string">ini结尾的一般都是配置文件</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">程序启动会先加载配置文件中的配置之后才真正的启动</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">[mysqld]  <span class="comment"># 一旦服务端启动立刻加载下面的配置</span></span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES </span><br><span class="line">[mysql]  <span class="comment"># 一旦客户端启动立刻加载下面的配置</span></span><br><span class="line">...</span><br><span class="line">[client]  <span class="comment"># 其他客户端</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要你自己新建一个my.ini的配置文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证配置是否真的是自动加载</span></span><br><span class="line">[mysql]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改配置文件后一定要重启服务才能生效</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 统一编码的配置 无需掌握 直接拷贝即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 偷懒 将管理员的用户名和密码也添加到配置文件中</span></span><br><span class="line">[mysqld]</span><br><span class="line">character-<span class="built_in">set</span>-server=utf8</span><br><span class="line">collation-server=utf8_general_ci</span><br><span class="line">[client]</span><br><span class="line">default-character-<span class="built_in">set</span>=utf8</span><br><span class="line">[mysql]</span><br><span class="line">user=<span class="string">&quot;root&quot;</span></span><br><span class="line">password=<span class="number">123456</span></span><br><span class="line">default-character-<span class="built_in">set</span>=utf8</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="基本sql语句"><a href="#基本sql语句" class="headerlink" title="基本sql语句"></a>基本sql语句</h3><p><strong>针对库的增删改查(文件夹)</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 增</span></span><br><span class="line">create database db1;</span><br><span class="line">create database db2 charset=<span class="string">&#x27;gbk&#x27;</span>;</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">show databases;  <span class="comment"># 查所有</span></span><br><span class="line">show create database db1;  <span class="comment"># 查单个</span></span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">alter database db2 charset=<span class="string">&#x27;utf8&#x27;</span>;</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">drop database db2;</span><br></pre></td></tr></table></figure>
-
-<p><strong>针对表的增删改查(文件)</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">在操作表(文件)的时候 需要指定所在的库(文件夹)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 查看当前所在的库的名字</span></span><br><span class="line">select database();</span><br><span class="line"><span class="comment"># 切换库</span></span><br><span class="line">use db1; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 增</span></span><br><span class="line">create table t1(<span class="built_in">id</span> <span class="built_in">int</span>,name char(<span class="number">4</span>));</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">show tables;  <span class="comment"># 查看当前库下面所有的表名</span></span><br><span class="line">show create table t1;</span><br><span class="line">describe t1;  <span class="comment"># 支持简写 desc t1;</span></span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">alter table t1 modify name char(<span class="number">16</span>);</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">drop table t1;</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">create table db2.t1(id int);  也可以用绝对路径的形式操作不同的库</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>针对数据的增删改查(一行行数据)</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">一定要先有库 有表 最后才能操作记录</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 增</span></span><br><span class="line">insert into t1 values(<span class="number">1</span>,<span class="string">&#x27;jason&#x27;</span>);</span><br><span class="line">insert into t1 values(<span class="number">1</span>,<span class="string">&#x27;jason&#x27;</span>),(<span class="number">2</span>,<span class="string">&#x27;egon&#x27;</span>),(<span class="number">3</span>,<span class="string">&#x27;tank&#x27;</span>);</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">select * <span class="keyword">from</span> t1;  <span class="comment"># 该命令当数据量特别大的时候不建议使用</span></span><br><span class="line">select name <span class="keyword">from</span> t1;</span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">update t1 <span class="built_in">set</span> name=<span class="string">&#x27;DSB&#x27;</span> where <span class="built_in">id</span> &gt; <span class="number">1</span>;</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">delete <span class="keyword">from</span> t1 where <span class="built_in">id</span> &gt; <span class="number">1</span>;</span><br><span class="line">delete <span class="keyword">from</span> t1 where name=<span class="string">&#x27;jason&#x27;</span>;</span><br><span class="line"><span class="comment"># 将表所有的数据清空</span></span><br><span class="line">delete <span class="keyword">from</span> t1;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>Mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c语言指针</title>
-    <url>/2021/09/29/zhizhen/</url>
-    <content><![CDATA[<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a><em><strong><u>指针</u></strong></em></h1><h2 id="指针的重要性"><a href="#指针的重要性" class="headerlink" title="指针的重要性"></a><strong>指针的重要性</strong></h2><p><strong>表示一些复杂的数据结构  快速的传递数据，减少了内存的耗用  使函数返回 1个以上的值</strong> </p>
-<p><strong>能直接访问硬件 能够方便的处理字符串 是理解面向对象语言中引用的基础</strong> </p>
-<p><strong>总结:指针是c语言的灵魂</strong> </p>
-<hr>
-<h2 id="指针的定义"><a href="#指针的定义" class="headerlink" title="指针的定义"></a><strong>指针的定义</strong></h2><p><strong>地址</strong> </p>
-<p><strong>内存单元的编号 从零开始的非负整数 范围 :4G [ O- 4G- l ]</strong></p>
-<p> <strong>指针</strong> </p>
-<p><strong>指针就是地址， 地址就是指针</strong> </p>
-<p><strong>指针变量就是存放内存单元编号的变量，或者说指针变量就是存放地址的变量 指针和指针变量是两个不同的概念</strong> </p>
-<p><strong>但是要注意: 通常我们叙述时会把指针变量简称为指针，实际它们含义并不 指针的本质就是一个操作受限的非负整数</strong> </p>
-<hr>
-<h2 id="指针的分类"><a href="#指针的分类" class="headerlink" title="指针的分类"></a><strong>指针的分类</strong></h2><ol>
-<li><strong>基本类型指针</strong> </li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> * p; <span class="comment">//p是变量的名字， int *表示 p变量存放的是int类型变量的地址//int * p; 不表示定义了一个名字叫做*p的变量** </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> j;</span><br><span class="line">p = &amp;i; </span><br></pre></td></tr></table></figure>
-
-
-
-<ol>
-<li><p><strong>p保存了i的地址，因此p指向i</strong></p>
-</li>
-<li><p><strong>p不是i， i也不是p ，更准确的说: 修改p 的值不影响i 的值，修改 i的值也不会影响p 的值 如果一个指针变量指向 个普通变量，则   指针变量就完全等同于普通变量</strong></p>
-<p><strong>例子：如果 p是个指针变量，并且 p存放了普通变量 i的地址 。则p 指向了普通变量i</strong></p>
-<p> *<strong>p 就完全等同于 i</strong> </p>
-<p> <strong>或者说 在所有出现*p的地方都可以替换成i</strong></p>
-<p> <strong>在所有出现i的地方都可以替换成句<em>p</em></strong></p>
-<p>*<em>最准确的解释是:<em>p表示的是以p 的内容为地址的变量</em></em></p>
-<p><strong>附注:</strong> </p>
-<p>*<strong>的含义 1.乘法</strong> </p>
-<ol start="2">
-<li><p>*<em>定义指针变量 int * p;  //定义了一个名字叫p的变量， int <em>表示p 只能存放int变量的地址</em></em> </p>
-</li>
-<li><p><strong>指针运算符</strong> </p>
-<p><strong>该运算符放在已经定义好的指针变量的前面 如果p 是一个已经定义好的指针变量 则*p表示以p 的内容为地址的变量</strong></p>
-<p> <strong>如何通过被调函数修改主调函数普通变量的值</strong></p>
-<p> <strong>1.实参必须为该普通变量的地址</strong> </p>
-<ol start="2">
-<li><p><strong>形参必须为指针变量</strong></p>
-</li>
-<li><p><strong>在被调函数中通过</strong></p>
-<p> *<strong>形参名.. .</strong>  </p>
-<p><strong>的方式就可以修改主调函数相关变量的值</strong></p>
-</li>
-</ol>
-</li>
-<li><p><strong>指针和数组</strong> </p>
-<p><strong>指针和一维数组</strong> </p>
-<p><strong>一维数组名</strong> </p>
-<p><strong>一维数组名 是个指针常量</strong> </p>
-<p><strong>它存放的是一维数组第一个元素的地址</strong> </p>
-<p>下标和指针的关系如果p是个指针变量,则p[i]永远等价于* (p+i)</p>
-<p><strong>确定一个一维数组需要几个参数【如一个函数要处理一个一维数组，则要接收该数组的哪些信息】</strong></p>
-<p> <strong>需要两个参数: 数组第一个元素的地址 数组的长度</strong></p>
-<p> <strong>指针变量的运算</strong></p>
-<p> <strong>指针变量不能相加  不能相乘   也不能相除</strong> </p>
-<p><strong>如果两个指针变量指向的是同一块连续空间中的不同存储单元， 则这两个指针变量才可以相减</strong></p>
-<h2 id="指针与数组的对比"><a href="#指针与数组的对比" class="headerlink" title="指针与数组的对比"></a>指针与数组的对比</h2></li>
-</ol>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center"><strong>指针</strong></th>
-<th align="center"><strong>数组</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>保存数据的地址，任何存入指针变量p的数据都会被当作地址来处理。p本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
-<td align="center"><strong>保存数据，数组名a代表的是数组首元素的首地址而不是数组的首地址。&amp;a才是整个数组的首地址。 a本身的地址由编译器另外存储，存储在哪里，我们并不知道。</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>间接访问数据，首先取得指针变量p的内容，把它作为地址，然后从这个地址提取数据或向这个地址写入数据。指针可以以指针的形式访问*(p+i);也可以以下标的形式访问p[i]。但其本质都是先取p的内容然后加上i *sizeof(类型)个byte作为数据的真正地址。</strong></td>
-<td align="center"><strong>直接访问数据， 数组名a是整个数组的名字，数组内每个元素 并没有名字。只能通过“具名+匿名” 的方式来访问其某个元素，不能把数组当一个整体 来进行读写操作。数组可以以指针的形式访问*(a+i);也可以以下标的形式访 问a[i].但其本质都是a所代表的数组首元素的首地址加上i*sizeof(类型)个byte作为数据的真正地址。</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>通常用于动态数据结构</strong></td>
-<td align="center"><strong>通常用于存储固定数目且数据类型相同的元</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>相关的函数为malloc和free.</strong></td>
-<td align="center"><strong>隐式分配和删除</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>通常指向匿名数据(当然也可指向具名数据）</strong></td>
-<td align="center"><strong>自身即为数组名</strong></td>
-</tr>
-</tbody></table>
-<h2 id="指针与二维数组"><a href="#指针与二维数组" class="headerlink" title="指针与二维数组"></a><strong>指针与二维数组</strong></h2><h3 id="指针与函数"><a href="#指针与函数" class="headerlink" title="指针与函数"></a><strong>指针与函数</strong></h3><h3 id="指针与结构体"><a href="#指针与结构体" class="headerlink" title="指针与结构体"></a><strong>指针与结构体</strong></h3><h3 id="多级指针"><a href="#多级指针" class="headerlink" title="多级指针"></a><strong>多级指针</strong></h3><p><strong>例：</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i =<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p=i;   <span class="comment">//p只能存放int类型变量的地址</span></span><br><span class="line"><span class="keyword">int</span> ** q=&amp;p;  / /q <span class="keyword">int</span> **类型， 所谓<span class="keyword">int</span> **类型就是指q只能存放<span class="keyword">int</span> *类型变的地址</span><br><span class="line"><span class="keyword">int</span> ***r= &amp;q; <span class="comment">//r int ***类型，所谓 int ***类型就是指r只能存放int **类型变量的地址</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="动态分配内存（重难点）"><a href="#动态分配内存（重难点）" class="headerlink" title="动态分配内存（重难点）"></a><strong>动态分配内存（重难点）</strong></h4><p><strong>传统数组的缺点:</strong> </p>
-<ol>
-<li><p><strong>数组长度必须事先制定，且只能是常整数，不能是变量</strong></p>
-<p><strong>例子:</strong> </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]; <span class="comment">//OK</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">int</span> len = <span class="number">5</span>; <span class="keyword">int</span> a[len]; <span class="comment">//error </span></span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li><p><strong>传统形式定义的数组，该数组的内存程序员无法手动释放 。在一个函数运行期间，系统为该函数中数组所分配的空间 会一直存在， 直到该函 数运行完毕肘，数组的 间才会被 系统释放</strong></p>
-</li>
-<li><p><strong>数组的长度一旦定义，其长度就不能再更改</strong> </p>
-<p> <strong>数组的长度不能在函数运行的过程中动态的扩充或缩小</strong></p>
-</li>
-<li><p><strong>A函数定义的数组，在 A函数运行期间可以被其它函数使用， 但A函数运行完毕之后， A函数中的数组将无法在被其他 函数使用</strong></p>
-<p><strong>传统方式定义的数组不能跨函数使用</strong></p>
-</li>
-</ol>
-</li>
-</ol>
-<h4 id="为什么要动态分配内存"><a href="#为什么要动态分配内存" class="headerlink" title="为什么要动态分配内存"></a><strong>为什么要动态分配内存</strong></h4><p><strong>动态数组很好的解决了传统数组的这4个缺陷</strong> </p>
-<p><strong>传统数组也叫静态数组</strong></p>
-<hr>
-<p><strong>😩努力在学习中，后续更新哦~</strong></p>
-]]></content>
-      <categories>
-        <category>c语言</category>
-      </categories>
-      <tags>
-        <tag>指针</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语作文笔记分享</title>
-    <url>/2021/09/29/yingyu/</url>
-    <content><![CDATA[<p><strong>1. 词： “出彩的”书面用词（一句一亮点）+ 四大类文章和论证逻辑必用词</strong></p>
-<p> <strong>“重要的”“不可或缺”</strong></p>
-<p>  <strong>Indispensable  Integral</strong></p>
-<p>  <strong>Relevant  vital crucial critical</strong> </p>
-<p> <strong>根源于。。。原因</strong></p>
-<p>   <strong>…stem from…</strong></p>
-<p>  <strong>相矛盾的观点</strong> </p>
-<p> <strong>Conflicting  contradictory  contrary  opposite</strong> </p>
-<p><strong>一个明显的趋势</strong></p>
-<p> <strong>Apparent marked discernible</strong> </p>
-<p><strong>一个棘手的问题</strong></p>
-<p> <strong>a thorny problem</strong> </p>
-<p><strong>Nevertheless  nonetheless</strong> </p>
-<p> <strong>…so that…    thereby…</strong></p>
-<p><strong>2. 句：四大类文章常用连接句， 开篇句，结尾句+ 句式变换</strong></p>
-<p><strong>现如今，大量的注意力正在给予。。。</strong></p>
-<p><strong>A great deal of attention is being paid to …</strong></p>
-<p><strong>权衡地来看，其优点胜过缺点。</strong> </p>
-<p><strong>On balance, pros outweigh cons.</strong> </p>
-<p><strong>在这种现象的背后，什么是动因呢？</strong></p>
-<p><strong>What are motivations behind this?</strong></p>
-<p><strong>采取紧急的措施是当务之急。</strong> </p>
-<p><strong>To take urgent action is an imperative.</strong> </p>
-<p><strong>在我们的前方是光明的前景。</strong> </p>
-<p><strong>Ahead of us lie bright prospects.</strong> </p>
-<p><strong>Only if __________.  (倒装句）</strong></p>
-<p><strong>3. 段： 开头结尾段内基本模式； 四大类文章大致段落组成</strong></p>
-<p><strong>4. 篇：样文,批改网自评。</strong></p>
-<hr>
-<p><strong>例题：（19交大）</strong></p>
-<p><strong>Give your opinions on this perspective: Obstacles can be seen as opportunities.</strong> </p>
-<p> <strong>样文：</strong></p>
-<p><strong>Life is not all rosy. We will all undergo ups and downs; joys and sorrows. Major obstacles in our lives, such as physical handicaps, failures in our career and loss of beloved ones can be terrifying. But optimists tend to regard obstacles as opportunities. Indeed, lots of strong-willed persons can emerge from barriers in their lives wiser and tougher.</strong> </p>
-<p><strong>Let’s explore how we can transform obstacles into opportunities from different angles. To start with, physical handicap can be devastating to most people, nevertheless lot can be derived from it from the perspective of a fearless person. Helen Keller suffered from irreversible sight and hearing impairment at an early age, but she ended up as a fertile writer who savored the manifold blessings of lives more than we physically sound persons. Equally remarkably, athletes who attend the Paralympics can sometimes run and swim faster than an average person without physical disabilities.</strong></p>
-<p><strong>Incredible stories like theses are no more rarely seen among ordinary people. Student who failed in their academic study in primary schools would perform much better and achieve a lot eventually if they were prodded and inspired timely. With humility and perseverance, slow-witted students are more likely to be aware of their own weaknesses and be motivated to be successful.</strong> </p>
-<p><strong>Last but not the least, think about how much our country has been through in the past two decades.  Massive earthquakes and outbreaks of epidemics once seemed to be hurdles impossible to be clear. But these hurdles turned out to be valuable opportunities for us to witness how united and capable we can be in the relentless struggles against disasters.</strong> </p>
-<p><strong>Granted, some obstacles in our lives can be overwhelming. But keep this in mind: what didn’t kill us makes us stronger.  Only if obstacles are reckoned as an opportunities could we complete missions impossible in our lives.</strong>  </p>
-<h3 id="观点论证型"><a href="#观点论证型" class="headerlink" title="观点论证型"></a><strong>观点论证型</strong></h3><p><strong>view  perspective notion  belief  conviction</strong> </p>
-<p><strong>Mindset  philosophy</strong> </p>
-<p><strong>Conventional idea</strong> </p>
-<p><strong>Outlook on life</strong> </p>
-<p><strong>模式化观念；成见。 Stereotype</strong> </p>
-<p><strong>There is a stereotype that a prestigious university can always guarantee its students success.</strong></p>
-<p><strong>可和以下</strong>adj混搭****</p>
-<p><strong>credible  justifiable</strong> </p>
-<p><strong>Prevailing widely-held  conventional.</strong> </p>
-<p><strong>Well-founded  well-grounded</strong></p>
-<p><strong>Ill-grounded</strong> </p>
-<p><strong>We should reinforce</strong>／underline the view that…****</p>
-<p><strong>It goes beyond doubt /dispute that…</strong> </p>
-<p><strong>Few would dispute that…</strong> </p>
-<p><strong>There is no question about…</strong></p>
-<p><strong>The view prevails among sb that…</strong></p>
-<p><strong>It is widely accepted that…</strong></p>
-<p><strong>There is a growing consensus that…</strong></p>
-<p><strong>It is unanimously agreed that…</strong></p>
-<p><strong>It is established that…</strong></p>
-<p> <strong>可以被确认的是</strong> </p>
-<p><strong>强调重要性</strong></p>
-<p><strong>Value   cherish</strong></p>
-<p><strong>Emphasis should be laid on ….</strong></p>
-<p><strong>Importance should be attached to…</strong> </p>
-<p><strong>We should pay particular attention to…</strong> </p>
-<p><strong>We cannot do without…</strong></p>
-<p><strong>… is acknowledge as/reckoned as an invaluable asset to us.</strong></p>
-<p><strong>… is a vital component of our life.</strong> </p>
-<hr>
-<h3 id="正反对比"><a href="#正反对比" class="headerlink" title="正反对比"></a><strong>正反对比</strong></h3><p><strong>We have  views. / )ur views seem to be…</strong></p>
-<p><strong>Conflicting / opposite /contrary/contradictory/</strong> </p>
-<p><strong>Differing / incompatible/inconsistent/irreconcilable</strong> </p>
-<p><strong>Their view seems to be…</strong></p>
-<p><strong>Plausible  stereotyped  ill-informed(<strong>无知的）ill-grounded</strong> （没有根据的）</strong></p>
-<p><strong>when it comes to: on the subject of. /concerning/ regarding</strong></p>
-<p><strong>We are divided…</strong></p>
-<p><strong>Our views differ…</strong></p>
-<p><strong>My view diverges from this…</strong></p>
-<p><strong>The view that… is under (…) debate. /at issue</strong></p>
-<p>​        <strong>heated/ intense/ vigorous</strong> </p>
-<p><strong>… has aroused controversy/ generated(considerable/wide-ranging)discussion. .</strong></p>
-<p><strong>Whether… is debatable/arguable.</strong> </p>
-<p><strong>Let’s shift our attention to the opposite /converse view.</strong> </p>
-<p> <strong>样文：</strong></p>
-<p><strong>It is increasingly apparent that overseas purchasing via online agents are now gaining considerable popularity. The ongoing trend appeals to some people on grounds of its convenience and affordability, whereas others are skeptical of it.</strong> </p>
-<p><strong>There are some distinct advantages when it comes to the process. First, convenience. the consumers can simply log on the overseas purchasing websites and have instant access to a wide array of high-quality products by simply tapping on the screen of their smart phones. Consequently, the shopping experience becomes time-saving and efficient, not to mention the fact that some commodities are not even available to domestic consumers. Second, affordability. The website can attract many consumers simultaneously to the same designer product so that they can sell it at a wholesale price, which in some cases could be only a fraction of the original one.</strong> </p>
-<p><strong>By contrast, many consumers voice their concerns. They would argue that the online agents cannot guarantee the quality of commodity unless the consumers check it out in person. Another worry is that sensitive personal data, such as credit card number and mobile phone number, can be leaked during the process, which might bring about security concerns.</strong></p>
-<p><strong>From where I stand, pros outweigh cons. Granted, overseas purchasing is a sphere where further improvements are still highly anticipated. The trend is now becoming unstoppable and the sellers on the platform are making every effort to refine it. Nonetheless, both the sellers and buyers should deliberate on how to tackle the potential data leak generated by the new mode of buying.</strong> </p>
-<hr>
-<h3 id="社会趋势"><a href="#社会趋势" class="headerlink" title="社会趋势"></a><strong>社会趋势</strong></h3><p><strong>名词类</strong></p>
-<p><strong>… is a(n)__ trend. /We are witnessing…</strong> </p>
-<p><strong>consistent  steady</strong> </p>
-<p>   <strong>accelerating (growing)</strong></p>
-<p>   <strong>underlying</strong> </p>
-<p>   <strong>dominant  prevailing</strong>  </p>
-<p><strong>marked   apparent  discernible.</strong> </p>
-<p><strong>There is a growing tendency for sb to do sth.</strong> </p>
-<p><strong>… is an observable phenomenon.</strong> </p>
-<p><strong>The phenomenon emerges gradually/ occurs frequently.</strong> </p>
-<p><strong>动词，形容词，副词类</strong></p>
-<p><strong>It amazes/startles us to see that…</strong></p>
-<p><strong>The past decade has witnessed…</strong></p>
-<p><strong>The phenomenon prevails among… and still persist.</strong> </p>
-<p><strong>It is remarkable that…</strong></p>
-<p><strong>It is commonplace that…</strong></p>
-<p><strong>It is not uncommon that…</strong></p>
-<p><strong>Not surprisingly, ______.</strong> </p>
-<p><strong>Globally, ________.</strong> </p>
-<p><strong>固定句式类</strong> </p>
-<p><strong>A great deal of attention is being paid to…</strong></p>
-<p><strong>… has aroused /received/ captured/compelled +</strong></p>
-<p>​             <strong>public/media/urgent attention.</strong> </p>
-<p><strong>… should be brought under spotlight.</strong></p>
-<p><strong>样文：</strong></p>
-<p><strong>Education is an essential not an extra. It is an intrinsic right of each one of us rather than the privilege of a few. Then how could we ensure as many students as possible the easy and quick access to education? Attending online course should not be the last resort. Quite the contrary, online eduction is now an accelerating trend. It amazes us to see that students worldwide can attend Massive Open Online Courses (MOOC) and obtain the information they need.</strong> </p>
-<p> <strong>There are many aspects contributing to the popularity of online courses. First, diversity. There are a wide span of courses available online which range from literature to economics and from elementary courses to advanced ones. You can browse the relevant information on open courses websites effortlessly. The merit of online courses is not confined to this. Let’s take a look at the accessibility of such course. Lots of prestigious universities, including Harvard, offer MOOC to students worldwide and some of them are free of charge. To catch a glimpse of the charisma of elite scholars there, you don’t need to travel long distance, Instead, you could instantly watch informative lectures at home by a simple click of the mouse. Last, completing daily routines online is now prevailing. Think about online shopping and online dating. Students might not do without online courses lest they should fall behind the times. Limitation, benefits and drawbacks</strong></p>
-<p><strong>Undeniably, more and more attention is being paid to this new mode of learning. The role of online education in our lives is literally not negligible. It is anticipated that in the foreseeable future a growing proportion of students can benefit considerably from it.</strong> </p>
-<hr>
-<h3 id="社会问题"><a href="#社会问题" class="headerlink" title="社会问题"></a><strong>社会问题</strong></h3><p><strong>__ is</strong></p>
-<p><strong>a(n) adverse/disturbing/worrying trend</strong></p>
-<p><strong>It astonishes/ alarms us to see that…</strong></p>
-<p>  <strong>极为惊讶  焦虑</strong></p>
-<p><strong>a(n) pressing / urgent /immediate/growing problem (question/issue)</strong></p>
-<p><strong>long-term  long-standing</strong> </p>
-<p>​    <strong>acute  grave</strong>  </p>
-<p>​    <strong>knotty.  Thorny</strong> </p>
-<p><strong>Sth poses/creates/ a problem for us.</strong> </p>
-<p><strong>We are confronted by …</strong></p>
-<p><strong>We are beset by… / we are overwhelmed by…</strong></p>
-<p>​     <strong>为。。。所苦恼</strong></p>
-<p><strong>We have to handle/address /tackle/come to grips with /grapple with</strong> </p>
-<p>​                          <strong>努力设法解决</strong></p>
-<p><strong>It’s hard to cure/clear up/overcome/resolve (the problem).</strong></p>
-<p><strong>We should attempt to alleviate /ease it.</strong> </p>
-<p><strong>We cannot evade/circumvent it.</strong> </p>
-<p>​        <strong>逃避      规避</strong> </p>
-<p><strong>究责</strong></p>
-<p><strong>Who is to blame for it?</strong></p>
-<p><strong>We have no one else to blame for this except for ourselves.</strong></p>
-<p><strong>The government should be held accountable for …</strong></p>
-<p><strong>The responsibility rests with …</strong></p>
-<p><strong>解决问题的手段</strong></p>
-<p><strong>We have to take initiative. /Much can be done.</strong> </p>
-<p><strong>We have to take … action. We have to take steps /measures to do</strong> </p>
-<p><strong>…take precaution at/against.</strong> </p>
-<p><strong>…take preventative measures.</strong> </p>
-<p>​     *<strong>appropriate immediate swift   urgent drastic  decisive  vigorous*</strong> </p>
-<p><strong>We have to make …efforts.</strong> </p>
-<p>​    <strong>Conscious  collective  concerted</strong> </p>
-<p><strong>It is preferable /desirable /fitting that sth be done.</strong> </p>
-<p><strong>We should ensure that…</strong></p>
-<p><strong>We should never neglect to do…</strong></p>
-<p><strong>We have no alternative but to do…</strong></p>
-<p><strong>… is a promising start.</strong> </p>
-<p><strong>The initial step is to do…</strong></p>
-<p><strong>It is a big step doing sth.</strong></p>
-<p><strong>Doing sth is an imperative.</strong> </p>
-<p><strong>… is the first/last resort.</strong> </p>
-<p><strong>例题：<em>Write an essay on what human beings have learned about the quick spread of a virus and what should be done to deal with it.</em></strong> </p>
-<p><strong>样文：</strong></p>
-<p><strong>Urgent action is now being taken around the globe to combat the novel coronavirus at present. The epidemic is still raging in spite of it being effectively contained in China. Throughout human history, how to fight against a virus has invariably been a thorny problem.</strong> </p>
-<p><strong>What might account for the swift spread of the virus ? There are many contributing factors. Before anything else, human beings have had very limited knowledge in this sphere. It is no surprising that mankind had long been afflicted by each breakout. Secondly, the increase in the world population has been exponential and the whole world has been much more closely connected than ever before. People travel by air and by train very frequently and effortlessly due to considerable improvement in public transit home and broad. And the increased mobility makes it easier and faster for the virus to be spread from person to person and from country to country.</strong> </p>
-<p><strong>Much can be done to tackle the spread of the virus. To quarantine residents in the virus-hit areas is a promising start. Decreased mobility had been proven to be the simplest and most effective measure to contain the spread in human history. Priority should also be given to how the medical resources can be mobilized in the rescue mission. In China, hundreds of thousands of medics have been dispatched to the infected areas and 1000-bed hospitals have been build within ten days to treat patients. More factories are being called on to manufacture masks and the daily capacity now increases to over 50 millions masks a day. Another concern is that people should be made aware of the potential exposure to viruses again if they still recklessly eat the meat of some wild animals. Last but not the least, more medical experts should dedicate themselves to the development of vaccines against viruses. The process can be time-consuming and strenuous. But we are convinced that the dawn of victory will appear eventually provided that we never relent in our efforts.</strong></p>
-<hr>
-<p><strong>附：考研原刊例句摘选 （注意位置化；功能化）</strong></p>
-<p><em><strong>Only in this way can we be sure that…</strong></em></p>
-<p><em><strong>For centuries, / Globally,  /in the years to come /… is a daily routine.</strong></em> </p>
-<p><em><strong>People have begun to become aware that…</strong></em></p>
-<p><em><strong>It is probably true to say that…</strong></em></p>
-<p><em><strong>underlying the phenomenon is the notion that…</strong></em></p>
-<p><em><strong>It doesn’t come as a surprise to realize that…</strong></em></p>
-<p><em><strong>The question naturally arises: why …</strong></em></p>
-<p><em><strong>Can we anticipate a day when…? It’s probably coming (if…)</strong></em></p>
-<p><em><strong>When considering the merits/drawbacks, __ is of prime importance.</strong></em> </p>
-<p><em><strong>____ add to our worries.</strong></em> </p>
-<p><em><strong>The question of … is much argued by…</strong></em></p>
-<p><em><strong>If we are to _____, it seems imperative not only that sth should be done but also that sth should be done.</strong></em> </p>
-<p><em><strong>The present situation is far from satisfactory though some progress has been made.</strong></em></p>
-<p><em><strong>… is due to the fact that…</strong></em></p>
-<p><em><strong>We desperately need more people who believe that…</strong></em></p>
-<p><em><strong>It is all well to blame …, but _______.</strong></em> </p>
-<p><em><strong>One way of overcoming this difficulty is to …</strong></em></p>
-<p><em><strong>…will continue (persist) as long as…</strong></em></p>
-<p><em><strong>On the whole such a conclusion can be drawn with a certain degree of confidence.</strong></em> </p>
-<p><em><strong>Is … indispensable without which ________?</strong></em></p>
-<p><em><strong>it is also of concern that…</strong></em></p>
-<p><em><strong>If you …, you are not alone</strong></em> </p>
-<p><em><strong>As anyone who has done…knows, ______.</strong></em> </p>
-<p><em><strong>Any small improvement in the realm will make a big impact on….</strong></em></p>
-<p><em><strong>When it comes to___, thinking about both the short-term fixes and long-term approaches.</strong></em> </p>
-<p><em><strong>We can surely harvest…</strong></em></p>
-<hr>
-<p><strong>本文结合自己的阅读与老师笔记整理，全是满满的干货哦，希望对大家有所帮助。</strong></p>
 ]]></content>
       <categories>
         <category>英语</category>
